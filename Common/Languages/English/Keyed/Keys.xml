@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="XSD_FILE_PATH">
+
+    <DarkDescent_VitaeExtracted>Extracted vitae</DarkDescent_VitaeExtracted>
+	<DarkDescent_OrgoneExtracted>Extracted orgone</DarkDescent_OrgoneExtracted>
+	
+	<!-- Settings -->
+	
+	<DarkDescent_SettingRegenTicks>Tickspeed for Regenerative Decoction healing</DarkDescent_SettingRegenTicks>
+	
+	<DarkDescent_SettingRavenousHunger>Enable ravenous hunger for swine</DarkDescent_SettingRavenousHunger>
+	<DarkDescent_SettingRavenousHungerMin>Minimum hunger percentage for ravenous hunger to activate</DarkDescent_SettingRavenousHungerMin>
+	
+	<DarkDescent_SettingIncite>Enable swine inciting other swine</DarkDescent_SettingIncite>
+	<DarkDescent_SettingInciteMin>Minimum hunger percentage for ravenous hunger to incite</DarkDescent_SettingInciteMin>
+	<DarkDescent_SettingInciteChance>Chance another swine is incited if all other requirements are met</DarkDescent_SettingInciteChance>
+	<DarkDescent_SettingInciteRadius>Radius for swine incitement</DarkDescent_SettingInciteRadius>
+		
+	<DarkDescent_SettingVitaeThirst>Enable vitae thirst for harvesters</DarkDescent_SettingVitaeThirst>
+	<DarkDescent_SettingVitaeThirstTicks>Number of ticks until harvesters enrage due to vitae thirst</DarkDescent_SettingVitaeThirstTicks>
+	
+	<!-- Pages -->
+	
+	<DarkDescent_PageDefault>Basic setting</DarkDescent_PageDefault>
+	<DarkDescent_PageRavenousHunger>Ravenous Hunger settings</DarkDescent_PageRavenousHunger>
+	<DarkDescent_PageVitaeThirst>Vitae Thirst settings</DarkDescent_PageVitaeThirst>
+	
+	<DarkDescent_Reset>Reset settings to default</DarkDescent_Reset>
+
+</LanguageData>

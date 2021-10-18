@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>DarkDescent_DecoctionRegen</defName>
+    <label>regenerative decoction</label>
+	<description>A decoction made from vitae. Consuming it causes cells to rapidly regenerate, healing wounds over time, and potentially healing permanent wounds over a much longer period of time. While this is perfectly safe for orb servants, due to their reanimated and vitae infused nature, the effect can cause runaway cellular regeneration in living flesh.</description>
+    <descriptionHyperlinks>
+      <HediffDef>DarkDescent_DecoctionRegen_High</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/DarkDescent_DecoctionRegeneration</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+	  <WorkToMake>800</WorkToMake>
+      <MarketValue>40</MarketValue>
+      <Mass>0.01</Mass>
+    </statBases>
+    <techLevel>Medieval</techLevel>
+	<stackLimit>25</stackLimit>
+    <ingestible Inherit="False">
+	    <preferability>NeverForNutrition</preferability>
+        <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+		<foodType>Fluid, Processed</foodType>
+		<baseIngestTicks>100</baseIngestTicks>
+		<chairSearchRadius>0</chairSearchRadius>
+		<ingestSound>Ingest_Beer</ingestSound>
+		<nurseable>true</nurseable>
+		<ingestHoldUsesTable>false</ingestHoldUsesTable>
+		<ingestCommandString>Drink {0}</ingestCommandString>
+		<ingestReportString>Drinking {0}.</ingestReportString>
+		<drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>DarkDescent_DecoctionRegen_High</hediffDef>
+          <severity>1.00</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1010</listOrder>
+      </li>
+    </comps>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+	<recipeMaker>
+      <researchPrerequisite>DarkDescent_DecoctionRegenerationResearch</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+        <li>DarkDescent_TableOrb</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <DarkDescent_Vitae>8</DarkDescent_Vitae>
+    </costList>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>DarkDescent_DecoctionRegen_High</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>regenerative decoction</label>
+	<description>A decoction made from vitae. Consuming it causes cells to rapidly regenerate, healing wounds over time, and potentially healing permanent wounds over a much longer period of time. While this is perfectly safe for orb servants, due to their reanimated and vitae infused nature, the effect can cause runaway cellular regeneration in living flesh.</description>
+    <defaultLabelColor>(1,1,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_HealPermanentWounds" />
+      <li Class="DarkDescent.HediffCompProperties_HealWounds" />
+    </comps>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.15</offset>
+          </li>
+		  <li>
+            <capacity>Metabolism</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
+		<hediffGivers>
+			<li Class="DarkDescent.HediffGiver_RandomHumanlike">
+				<hediff>Carcinoma</hediff>
+				<mtbDays>20</mtbDays>
+				<partsToAffect>
+				  <li>Torso</li>
+				  <li>Shoulder</li>
+				  <li>Arm</li>
+				  <li>Hand</li>
+				  <li>Finger</li>
+				  <li>Waist</li>
+				  <li>Toe</li>
+				  <li>Head</li>
+				  <li>Ear</li>
+				  <li>Nose</li>
+				  <li>Jaw</li>
+				  <li>Neck</li>
+				  <li>Leg</li>
+				  <li>Foot</li>
+				</partsToAffect>
+			</li>
+		</hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

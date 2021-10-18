@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Harvester -->
+	
+	<ThingDef ParentName="DarkDescent_CreationBase">
+		<defName>DarkDescent_Harvester</defName>
+		<label>servant harvester</label>
+		<description>A servant created by administering a harvester decoction, resulting in a warped parody of humanity.\n\nNo one knows who the original creators of the harvester were, as all that remains of their legacy is fragmented and incomprehensible. From what little can be deciphered, the main purpose of harvesters was to extract vitae from prisoners. It appears that harvesters were often used in conjunction with a maze, causing the prisoner to remain in a constant state of panic.\n\nHarvesters retain some of their human qualities, though not enough to still be considered human. They have a comparable level intelligence of intelligence to dogs, and can be taught some simpler tasks such as hauling and attacking. They are also rather effective in a fight.\n\Harvesters have a strange affinity towards vitae. They drain vitae with their bites and scratches, and then store it within their body, which can then be extracted through a medical procedure.\n\nIt appears to be beneficial to leave stored vitae in a harvester if it is not needed. Harvesters grow increasingly stronger as the concentration of vitae within their body increases, and they may consume vitae if they grow too hungry.\n\nCaution should be maintained when keeping harvesters, for they will turn on their creators if their internal store of vitae remains empty for too long.</description>
+		<uiIconScale>1.35</uiIconScale>
+		<statBases>
+		  <MarketValue>500</MarketValue>
+		  <MoveSpeed>4.0</MoveSpeed>
+		</statBases>
+	    <tools>
+		  <li>
+			<label>left hand</label>
+			<capacities>
+			  <li>DarkDescent_HarvesterScratch</li>
+			</capacities>
+			<power>10.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>right hand</label>
+			<capacities>
+			  <li>DarkDescent_HarvesterScratch</li>
+			</capacities>
+			<power>10.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>7</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		  <li>
+			<capacities>
+			  <li>DarkDescent_HarvesterBite</li>
+			</capacities>
+			<power>15.3</power>
+			<cooldownTime>2.4</cooldownTime>
+			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			<chanceFactor>0.9</chanceFactor>
+		  </li>
+		</tools>
+		<comps>
+		  <li Class="DarkDescent.CompProperties_VitaeHunger">
+			<mentalState>Manhunter</mentalState>
+			<hediff>DarkDescent_StoredVitae</hediff>
+		  </li>
+		</comps>
+		<race>
+		  <body>Human</body>
+		  <baseBodySize>1.0</baseBodySize>
+		  <baseHealthScale>2.5</baseHealthScale>
+		  <baseHungerRate>1.0</baseHungerRate>
+		  <wildness>0.8</wildness>
+		  <lifeStageAges>
+			<li>
+			  <def>AnimalAdult_Sterile</def>
+			  <minAge>0.0</minAge>
+			</li>
+		  </lifeStageAges>
+		</race>
+	</ThingDef>
+	  
+	<PawnKindDef Name="DarkDescent_Harvester" ParentName="AnimalKindBase">
+		<defName>DarkDescent_Harvester</defName>
+		<label>servant harvester</label>
+		<race>DarkDescent_Harvester</race>
+		<combatPower>200</combatPower>
+		<ecoSystemWeight>50</ecoSystemWeight>
+		<canArriveManhunter>true</canArriveManhunter>
+		<wildGroupSize>1~3</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Creation/Harvester/DarkDescent_Harvester</texPath>
+			  <drawSize>1.6</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Creation/Harvester/DarkDescent_Dessicated_Harvester_east</texPath>
+			  <drawSize>1.6</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+	
+
+</Defs>

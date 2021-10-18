@@ -1,0 +1,7 @@
+C:\Users\andre\Desktop\Rimworld\Amnesia\RimWorld - The Dark Descent\Assemblies\DarkDescent.dll
+C:\Users\andre\Desktop\Rimworld\Amnesia\RimWorld - The Dark Descent\Source\DarkDescent\DarkDescent\obj\Debug\DarkDescent.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\Rimworld\Amnesia\RimWorld - The Dark Descent\Source\DarkDescent\DarkDescent\obj\Debug\DarkDescent.dll
+C:\Users\andre\Desktop\Rimworld\Amnesia\RimWorld - The Dark Descent\1.2\Assemblies\DarkDescent.dll
+C:\Users\andre\Desktop\Rimworld\Amnesia\RimWorld - The Dark Descent\1.2\Source\DarkDescent\DarkDescent\obj\Debug\DarkDescent.dll
+C:\Users\andre\Desktop\Rimworld\Amnesia\RimWorld - The Dark Descent\1.2\Source\DarkDescent\DarkDescent\obj\Debug\DarkDescent.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\Rimworld\Amnesia\RimWorld - The Dark Descent\1.2\Source\DarkDescent\DarkDescent\obj\Debug\DarkDescent.csprojAssemblyReference.cache

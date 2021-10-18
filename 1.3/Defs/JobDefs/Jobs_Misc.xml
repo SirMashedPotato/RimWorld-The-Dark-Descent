@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>DarkDescent_ActivateServant</defName>
+    <driverClass>JobDriver_UseItem</driverClass>
+    <reportString>activating servant.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  
+  <JobDef>
+    <defName>DarkDescent_ExtractVitae</defName>
+    <driverClass>DarkDescent.JobDriver_ExtractVitae</driverClass>
+    <reportString>extracting vitae from TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  
+  <JobDef>
+    <defName>DarkDescent_VitaeResurrect</defName>
+    <driverClass>DarkDescent.JobDriver_VitaeResurrect</driverClass>
+    <reportString>resurrecting TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  
+</Defs>

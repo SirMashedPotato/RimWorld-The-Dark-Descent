@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+   <!-- DarkDescent_Inhibitor -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>DarkDescent_Inhibitor</defName>
+    <label>servant inhibitor</label>
+    <labelNoun>a servant inhibitor</labelNoun>
+    <description>An installed servant inhibitor implant.</description>
+    <descriptionHyperlinks><ThingDef>DarkDescent_Inhibitor</ThingDef></descriptionHyperlinks>
+    <stages>
+      <li>
+        <capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.10</offset>
+			  </li>
+		</capMods>
+      </li>
+    </stages>
+    <spawnThingOnRemoved>DarkDescent_Inhibitor</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>DarkDescent_Inhibitor</defName>
+    <label>servant inhibitor</label>
+    <description>A brain implant which inhibits a servants free will. Installing this in an orb servant will greatly increase the hunger threshold required for them to initiate a hunger frenzy.</description>
+    <descriptionHyperlinks><RecipeDef>InstallDarkDescent_Inhibitor</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>20</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+	<recipeMaker>
+        <researchPrerequisite>DarkDescent_InhibitorResearch</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallDarkDescent_Inhibitor</defName>
+    <label>install servant inhibitor</label>
+    <description>Install a servant inhibitor.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_Inhibitor</ThingDef>
+      <HediffDef>DarkDescent_Inhibitor</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing servant inhibitor.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DarkDescent_Inhibitor</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DarkDescent_Inhibitor</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>DarkDescent_Inhibitor</addsHediff>
+	<recipeUsers Inherit="False">
+      <li>DarkDescent_Wretch</li>
+	  <li>DarkDescent_Engineer</li>
+      <li>DarkDescent_Harvester</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveDarkDescent_Inhibitor</defName>
+    <label>remove servant inhibitor</label>
+    <description>Remove the servant inhibitor.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_Inhibitor</ThingDef>
+      <HediffDef>DarkDescent_Inhibitor</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing servant inhibitor.</jobString>
+    <removesHediff>DarkDescent_Inhibitor</removesHediff>
+	<recipeUsers Inherit="False">
+      <li>DarkDescent_Wretch</li>
+	  <li>DarkDescent_Engineer</li>
+      <li>DarkDescent_Harvester</li>
+    </recipeUsers>
+  </RecipeDef>
+
+</Defs>

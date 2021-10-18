@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- base -->
+	
+		<ThingDef ParentName="ResourceBase" Name="DarkDescent_InactiveBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<techLevel>Neolithic</techLevel>
+		<description>An inactive servant. Activation requires a small amount of vitae, taken from the activator.</description>
+		<thingCategories>
+		  <li>InactiveServant</li>
+		</thingCategories>
+		<statBases>
+		  <Mass>10</Mass>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<comps>
+		  <li Class="CompProperties_Usable">
+			<useJob>DarkDescent_ActivateServant</useJob>
+			<useLabel>Activate</useLabel>
+		  </li>
+		  <li Class="CompProperties_UseEffect">
+			<compClass>CompUseEffect_DestroySelf</compClass>
+		  </li>
+		  <li Class="CompProperties_Rottable">
+			<daysToRotStart>4</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		  </li>
+		  <li>
+			<compClass>CompQuality</compClass>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Grunt -->
+	
+	<ThingDef ParentName="DarkDescent_InactiveBase">
+		<defName>DarkDescent_InactiveGrunt</defName>
+		<label>inactive grunt</label>
+		<descriptionHyperlinks><ThingDef>DarkDescent_Grunt</ThingDef></descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Pawn/Creation/Grunt/DarkDescent_Grunt_south</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<stackLimit>1</stackLimit>
+		<tradeNeverStack>true</tradeNeverStack>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+		  <MarketValue>350</MarketValue>
+		  <MaxHitPoints>80</MaxHitPoints>
+		</statBases>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<comps>
+		  <li Class="DarkDescent.CompProperties_UseEffect_ActivateServant">
+			<ServantKind>DarkDescent_Grunt</ServantKind>
+			<drainToActivator>DarkDescent_VitaeExtracted</drainToActivator>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Brute -->
+	
+	<ThingDef ParentName="DarkDescent_InactiveBase">
+		<defName>DarkDescent_InactiveBrute</defName>
+		<label>inactive brute</label>
+		<descriptionHyperlinks><ThingDef>DarkDescent_Brute</ThingDef></descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Pawn/Creation/Brute/DarkDescent_Brute_south</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<stackLimit>1</stackLimit>
+		<tradeNeverStack>true</tradeNeverStack>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+		  <MarketValue>400</MarketValue>
+		  <MaxHitPoints>80</MaxHitPoints>
+		</statBases>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<comps>
+		  <li Class="DarkDescent.CompProperties_UseEffect_ActivateServant">
+			<ServantKind>DarkDescent_Brute</ServantKind>
+			<drainToActivator>DarkDescent_VitaeExtracted</drainToActivator>
+			<drainToActivatorSeverity>0.2</drainToActivatorSeverity>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Wretch -->
+	
+	<ThingDef ParentName="DarkDescent_InactiveBase">
+		<defName>DarkDescent_InactiveWretch</defName>
+		<label>inactive wretch</label>
+		<descriptionHyperlinks><ThingDef>DarkDescent_Wretch</ThingDef></descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Pawn/Creation/Wretch/DarkDescent_Wretch_south</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<stackLimit>1</stackLimit>
+		<tradeNeverStack>true</tradeNeverStack>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+		  <MarketValue>500</MarketValue>
+		  <MaxHitPoints>80</MaxHitPoints>
+		</statBases>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<comps>
+		  <li Class="DarkDescent.CompProperties_UseEffect_ActivateServant">
+			<ServantKind>DarkDescent_Wretch</ServantKind>
+			<drainToActivator>DarkDescent_VitaeExtracted</drainToActivator>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Tesla -->
+	
+	<ThingDef ParentName="DarkDescent_InactiveBase">
+		<defName>DarkDescent_InactiveTesla</defName>
+		<label>inactive tesla</label>
+		<descriptionHyperlinks><ThingDef>DarkDescent_Tesla</ThingDef></descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Pawn/Creation/Tesla/DarkDescent_Tesla_south</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<stackLimit>1</stackLimit>
+		<tradeNeverStack>true</tradeNeverStack>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+		  <MarketValue>700</MarketValue>
+		  <MaxHitPoints>80</MaxHitPoints>
+		</statBases>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<comps>
+		  <li Class="DarkDescent.CompProperties_UseEffect_ActivateServant">
+			<ServantKind>DarkDescent_Tesla</ServantKind>
+			<drainToActivator>DarkDescent_VitaeExtracted</drainToActivator>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Engineer -->
+	
+	<ThingDef ParentName="DarkDescent_InactiveBase">
+		<defName>DarkDescent_InactiveEngineer</defName>
+		<label>inactive engineer</label>
+		<descriptionHyperlinks><ThingDef>DarkDescent_Engineer</ThingDef></descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Pawn/Creation/Engineer/DarkDescent_Engineer_south</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<stackLimit>1</stackLimit>
+		<tradeNeverStack>true</tradeNeverStack>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+		  <MarketValue>600</MarketValue>
+		  <MaxHitPoints>80</MaxHitPoints>
+		</statBases>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<comps>
+		  <li Class="DarkDescent.CompProperties_UseEffect_ActivateServant">
+			<ServantKind>DarkDescent_Engineer</ServantKind>
+			<drainToActivator>DarkDescent_VitaeExtracted</drainToActivator>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Hound -->
+	
+	<ThingDef ParentName="DarkDescent_InactiveBase">
+		<defName>DarkDescent_InactiveHound</defName>
+		<label>inactive hound</label>
+		<descriptionHyperlinks><ThingDef>DarkDescent_Hound</ThingDef></descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Pawn/Creation/Hound/DarkDescent_Hound_south</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<stackLimit>1</stackLimit>
+		<tradeNeverStack>true</tradeNeverStack>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+		  <MarketValue>350</MarketValue>
+		  <MaxHitPoints>80</MaxHitPoints>
+		</statBases>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<comps>
+		  <li Class="DarkDescent.CompProperties_UseEffect_ActivateServant">
+			<ServantKind>DarkDescent_Hound</ServantKind>
+			<drainToActivator>DarkDescent_VitaeExtracted</drainToActivator>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Goliath -->
+	<!--
+	<ThingDef ParentName="DarkDescent_InactiveBase">
+		<defName>DarkDescent_InactiveGoliath</defName>
+		<label>inactive goliath</label>
+		<descriptionHyperlinks><ThingDef>DarkDescent_Goliath</ThingDef></descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Things/Pawn/Creation/Goliath/DarkDescent_Goliath_south</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<stackLimit>1</stackLimit>
+		<tradeNeverStack>true</tradeNeverStack>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+		  <MarketValue>700</MarketValue>
+		  <MaxHitPoints>160</MaxHitPoints>
+		</statBases>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<comps>
+		  <li Class="DarkDescent.CompProperties_UseEffect_ActivateServant">
+			<ServantKind>DarkDescent_Goliath</ServantKind>
+			<drainToActivator>DarkDescent_VitaeExtracted</drainToActivator>
+			<drainToActivatorSeverity>0.2</drainToActivatorSeverity>
+			<hediffToApply>DarkDescent_VitaeSaturated</hediffToApply>
+		  </li>
+		</comps>
+	</ThingDef>
+	-->
+</Defs>

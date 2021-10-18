@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>DarkDescent_OrbTableResearch</defName>
+		<label>orb table construction</label>
+		<description>From studying ancient manuscripts and texts, you have devised a way of producing instruments that will allow you to utilise an orb.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+	</ResearchProjectDef>
+	
+	<!-- extracts -->
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_VitaeResearch</defName>
+		<label>vitae extraction</label>
+		<description>From studying manuscripts recovered from Brennenburg Castle, you have pieced together the methods used to extract vitae from a human.\n\nThis will also grant your colonists understanding of the methods required to harvest vitae from a servant 'harvester'.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_OrgoneResearch</defName>
+		<label>orgone extraction</label>
+		<description>From studying texts written by one Oswald Mandus, you have pieced together the methods used to extract orgone from a human.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_VitaeResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<!-- servants -->
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_DecoctionHarvesterResearch</defName>
+		<label>servant harvester decoction</label>
+		<description>From studying ancient texts of unknown origin, you have discovered a mixture capable of turning living humans into servant 'harvester'.\n\nHarvesters can not perform complicated jobs, instead they are used to extract vitae from their victims. Stored vitae will empower the harvester, or can be extracted through a medical procedure. Harvesters who remain drained of vitae for too long will turn manhunter.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_VitaeResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_HoundResearch</defName>
+		<label>servant hound creation</label>
+		<description>From studying manuscripts recovered from Brennenburg Castle, you have pieced together the methods used to create a servant 'hound'.\n\nHounds are simply dogs reanimated through the use of vitae and an orb. Their mouth is filled with toxic saliva that causes toxic buildup in victims of their bites.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_OrbTableResearch</li>
+			<li>DarkDescent_VitaeResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_GruntResearch</defName>
+		<label>servant grunt creation</label>
+		<description>From studying manuscripts recovered from Brennenburg Castle, you have pieced together the methods used to create a servant 'grunt'.\n\nGrunts are one of the more basic servants. Training them in guard will allow them to mine rocks, cut plants, clean filth and toggle switches.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_HoundResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_BruteResearch</defName>
+		<label>servant brute creation</label>
+		<description>From studying manuscripts recovered from Brennenburg Castle, you have pieced together the methods used to create a servant 'brute'.\n\nBrutes are a solely combat focused servant. They have inbuilt armour that protects them from damage, which can be further upgraded through research. Several custom built weapons can also be attached to their arms, in place of their hands.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_GruntResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	<!--
+	<ResearchProjectDef>
+		<defName>DarkDescent_GoliathResearch</defName>
+		<label>servant goliath creation</label>
+		<description>From studying the lost manuscripts of Brennenburg Castle, you have pieced together the methods used to create a servant 'goliath'.\n\nGoliaths are mountains of meat, and are capable of withstanding countless blows.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_BruteResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	-->
+	<ResearchProjectDef>
+		<defName>DarkDescent_WretchResearch</defName>
+		<label>servant wretch creation</label>
+		<description>From studying texts written by one Oswald Mandus, you have pieced together the methods used to combine human and pig, into the servant 'wretch'.\n\nWretch are one of the more intelligent types of servant. Training them in haul will allow them to refuel buildings and turrets, and deliver resources to frames, sadly they are not intelligent enough to deliver resources to blueprints. Training them in guard will allow them to mine rocks, cut plants, clean filth and flick switches.\n\nIf a wretch becomes too hungry it will turn manhunter. Wretch in this state are capable of inciting nearby wretch and engineers to join their uprising.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_GruntResearch</li>
+			<li>DarkDescent_OrgoneResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_EngineerResearch</defName>
+		<label>servant engineer creation</label>
+		<description>From studying texts written by one Oswald Mandus, you have pieced together the methods used to combine human and pig, into the servant 'engineer'.\n\nEngineers are highly intelligent, and are able to perform significantly more complicated jobs than other servants. Training them in haul will allow them to refuel buildings and turrets, and deliver resources to both frames and blueprints. Training them in guard will allow them to repair buildings, unsintal and decosntruct buildings, construct frames and flick switches.\n\nIf an engineer becomes too hungry it will turn manhunter. Engineer in this state are capable of inciting nearby engineers and wretch to join their uprising.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_WretchResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_TeslaResearch</defName>
+		<label>servant tesla creation</label>
+		<description>From studying texts written by one Oswald Mandus, you have pieced together the methods used to combine human and pig, into the servant 'tesla'.\n\nTesla are far too brain damaged to perform even simple tasks. Instead they are primarily used in fighting mechanoids. When damaged, a tesla may emit a burst of electricity, overloading electrical circuits and temporarily stunning mechanoids. The melee attacks of tesla also have a similar, though weaker, effect. Several modified tesla coils may be installed in order to modify the discharge effect.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_WretchResearch</li>
+			<li>Electricity</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<!-- implants -->
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_BruteImplantsResearch</defName>
+		<label>brute upgrades</label>
+		<description>From studying the servant 'brute', you have devised several weapons that can be attached to a brutes arm, and upgraded armour that can be attached to the chest.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>Smithing</li>
+			<li>DarkDescent_BruteResearch</li>
+		</prerequisites>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_DampenerResearch</defName>
+		<label>dampener implant</label>
+		<description>From studying the servant 'wretch', 'engineer' and 'harvester', you have devised a basic implant that will reduce their insatiable hunger.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>Prosthetics</li>
+			<li>DarkDescent_WretchResearch</li>
+		</prerequisites>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>3.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+		  <li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_InhibitorResearch</defName>
+		<label>inhibitor implant</label>
+		<description>From studying the servant 'wretch', 'engineer' and 'harvester', you have devised an advanced implant that will completely inhibit their insatiable hunger.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>Bionics</li>
+			<li>DarkDescent_DampenerResearch</li>
+		</prerequisites>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>3.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+		  <li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_TeslaImplantsResearch</defName>
+		<label>tesla coil upgrades</label>
+		<description>From studying the servant 'tesla', you have devised several ways of creating implants that will improve their electrical capabilites.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>DarkDescent_TeslaResearch</li>
+		</prerequisites>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>3.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_TeslaCoolingResearch</defName>
+		<label>tesla cooling rods</label>
+		<description>From studying the servant 'tesla', you have devised a way to reduce their core temperature using cooling rods, which can be installed into multiple spots along their arms and legs.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>DarkDescent_TeslaResearch</li>
+		</prerequisites>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>3.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	</ResearchProjectDef>
+	
+	
+	<!-- decoctions + infusions -->
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_DecoctionRegenerationResearch</defName>
+		<label>regenerative decoction</label>
+		<description>From studying the effects of vitae on living flesh, you have discovered a mixture that aids in regenerating flesh.</description>
+		<baseCost>5000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>4.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_VitaeResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_InfusionResurrectionResearch</defName>
+		<label>resurrective infusion</label>
+		<description>From studying ancient texts of unknown origin, you have discovered device capable of resurrecting the dead.</description>
+		<baseCost>5000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>4.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_DecoctionRegenerationResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<!--
+	<ResearchProjectDef>
+		<defName>DarkDescent_WeyersTonicResearch</defName>
+		<label>Weyer's Tonic</label>
+		<description>From studying manuscripts recovered from Brennenburg Castle, you have pieced together, with some adjustments, the methods used to create Weyer's Tonic, a mixture capable of turning back the biological clock.</description>
+		<baseCost>5000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>5.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_VitaeResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	-->
+	
+	<!-- Other -->
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_ExtractorResearch</defName>
+		<label>vitae extractor</label>
+		<description>From studying ancient texts of unknown origin, you have discovered schematics detailing a device capable of completely draining a living being of vitae.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_DecoctionHarvesterResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_GeneratorResearch</defName>
+		<label>vitae powered generator</label>
+		<description>From studying ancient texts of unknown origin, you have discovered schematics detailing a generator capable of converting vitae into an electrical charge.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>5.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>Electricity</li>
+			<li>DarkDescent_VitaeResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+</Defs>

@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Achievements Expanded</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs</xpath>
+					<value>
+
+						<AchievementsExpanded.AchievementTabDef>
+							<defName>DarkDescent_AchievementsTab</defName>
+							<label>Dark Descent</label>
+						</AchievementsExpanded.AchievementTabDef>
+						
+					<!-- Simple Achievements -->
+						
+						<!-- Obtain items -->
+
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementObtainOrb</defName>
+							<label>Twisted Reflection</label>
+							<description>Obtain an orb</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.ItemTracker">
+								<def>DarkDescent_Orb</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/DarkDescent_AchievementObtainOrb</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementObtainVitae</defName>
+							<label>The First Drop</label>
+							<description>Obtain your first vial of vitae</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.ItemTracker">
+								<def>DarkDescent_Vitae</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/DarkDescent_AchievementObtainVitae</texPath>
+							<points>5</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementObtainVitaeLarge</defName>
+							<label>You Enjoy This, Don't You?</label>
+							<description>Obtain 1000 vials of vitae</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.ItemTracker">
+								<def>DarkDescent_Vitae</def>
+								<count>1000</count>
+							</tracker>
+
+							<texPath>Achievements/DarkDescent_AchievementObtainVitaeLarge</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementObtainOrgone</defName>
+							<label>The Essence of Life Itself</label>
+							<description>Obtain your first vial of orgone</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.ItemTracker">
+								<def>DarkDescent_Orgone</def>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/DarkDescent_AchievementObtainOrgone</texPath>
+							<points>5</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementObtainOrgoneLarge</defName>
+							<label>Enough to Power an Entire Factory</label>
+							<description>Obtain 1000 vials of orgone</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.ItemTracker">
+								<def>DarkDescent_Orgone</def>
+								<count>1000</count>
+							</tracker>
+
+							<texPath>Achievements/DarkDescent_AchievementObtainOrgoneLarge</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<!-- Build buildings -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementBuildVitaeGenerator</defName>
+							<label>Powered by Pain</label>
+							<description>Construct five vitae powered generators</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.BuildingTracker">
+								<def>DarkDescent_VitaePoweredGenerator</def>
+								<count>5</count>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementBuildVitaeGenerator</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<!--
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementBuildOrgoneGenerator</defName>
+							<label>Powered by Suffering</label>
+							<description>Construct an orgone powered generator</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.BuildingTracker">
+								<def>DarkDescent_OrgonePoweredGenerator</def>
+								<count>1</count>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementBuildOrgoneGenerator</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						-->
+						
+						<!-- Craft servants * Likely needs custom code * -->
+						
+						
+						
+						<!-- Obtain first of each servant -->
+						
+						<!-- Needs custom code
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementCreateFirst</defName>
+							<label>The First of Many</label>
+							<description>Create your first servant of any kind</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KindDefTracker">
+								<kindDefs>
+									<li>
+										<key>DarkDescent_Hound</key>
+										<value>1</value>
+									</li>
+								</kindDefs>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementCreateFirst</texPath>
+							<points>5</points>
+						</AchievementsExpanded.AchievementDef>
+						-->
+						
+						<!-- Needs custom code
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementCreateFifty</defName>
+							<label>A Whole Army</label>
+							<description>Create your fiftieth servant</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KindDefTracker">
+								<kindDefs>
+									<li>
+										<key>DarkDescent_Hound</key>
+										<value>1</value>
+									</li>
+								</kindDefs>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementCreateFifty</texPath>
+							<points>5</points>
+						</AchievementsExpanded.AchievementDef>
+						-->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementCreateHound</defName>
+							<label>From Lassie to Cujo</label>
+							<description>Create and activate your first servant 'Hound'</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KindDefTracker">
+								<kindDefs>
+									<li>
+										<key>DarkDescent_Hound</key>
+										<value>1</value>
+									</li>
+								</kindDefs>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementCreateHound</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementCreateGrunt</defName>
+							<label>Straight Out of Brennenburg</label>
+							<description>Create and activate your first servant 'Grunt'</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KindDefTracker">
+								<kindDefs>
+									<li>
+										<key>DarkDescent_Grunt</key>
+										<value>1</value>
+									</li>
+								</kindDefs>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementCreateGrunt</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementCreateBrute</defName>
+							<label>Humpty Dumpty</label>
+							<description>Create and activate your first servant 'Brute'</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KindDefTracker">
+								<kindDefs>
+									<li>
+										<key>DarkDescent_Brute</key>
+										<value>1</value>
+									</li>
+								</kindDefs>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementCreateBrute</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementCreateWretch</defName>
+							<label>This Little Piggy...</label>
+							<description>Create and activate your first servant 'Wretch'</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KindDefTracker">
+								<kindDefs>
+									<li>
+										<key>DarkDescent_Wretch</key>
+										<value>1</value>
+									</li>
+								</kindDefs>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementCreateWretch</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementCreateEngineer</defName>
+							<label>The One That Built The Brick House</label>
+							<description>Create and activate your first servant 'Engineer'</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KindDefTracker">
+								<kindDefs>
+									<li>
+										<key>DarkDescent_Engineer</key>
+										<value>1</value>
+									</li>
+								</kindDefs>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementCreateEngineer</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementCreateTesla</defName>
+							<label>Electrifrying</label>
+							<description>Create and activate your first servant 'Tesla'</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KindDefTracker">
+								<kindDefs>
+									<li>
+										<key>DarkDescent_Tesla</key>
+										<value>1</value>
+									</li>
+								</kindDefs>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementCreateTesla</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementCreateHarvester</defName>
+							<label>Rebirth</label>
+							<description>Obtain your first servant 'Harvester'</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KindDefTracker">
+								<kindDefs>
+									<li>
+										<key>DarkDescent_Harvester</key>
+										<value>1</value>
+									</li>
+								</kindDefs>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementCreateHarvester</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementCreateAll</defName>
+							<label>The Whole Family is Here</label>
+							<description>Obtain all of the original servants in this mod</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KindDefTracker">
+								<kindDefs>
+									<li>
+										<key>DarkDescent_Hound</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>DarkDescent_Grunt</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>DarkDescent_Brute</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>DarkDescent_Wretch</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>DarkDescent_Engineer</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>DarkDescent_Tesla</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>DarkDescent_Harvester</key>
+										<value>1</value>
+									</li>
+								</kindDefs>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementCreateAll</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+						<!--
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementCreateGoliath</defName>
+							<label>Say Hello to My Little Friend</label>
+							<description>Obtain your first servant 'Goliath'</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KindDefTracker">
+								<kindDefs>
+									<li>
+										<key>DarkDescent_Goliath</key>
+										<value>1</value>
+									</li>
+								</kindDefs>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementCreateGoliath</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+						-->
+						<!-- Servant Hediff Related -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementShinyServant</defName>
+							<label>Shiny Abomination</label>
+							<description>Obtain and activate your first legendary quality servant</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.HediffTracker">
+								<def>DarkDescent_ServantQuality_Legendary</def>
+								<count>1</count>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementShinyServant</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementBruteUpgrade</defName>
+							<label>One-Upping Pyramid Head</label>
+							<description>Attach upgraded armour and two great knives to a brute</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.MultiHediffTracker">
+								<defs>
+									<li>
+										<key>DarkDescent_BruteGreatKnife</key>
+										<value>2</value>
+									</li>
+									<li>
+										<key>DarkDescent_BruteArmour</key>
+										<value>1</value>
+									</li>
+								</defs>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementBruteUpgrade</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementTeslaCoolant</defName>
+							<label>One Cool Hog</label>
+							<description>Attach ten coolant rods to a tesla</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.MultiHediffTracker">
+								<defs>
+									<li>
+										<key>DarkDescent_TeslaCoolant</key>
+										<value>10</value>
+									</li>
+								</defs>
+
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementTeslaCoolant</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementLobotomy</defName>
+							<label>No Snickers Required</label>
+							<description>Implant a servant inhibitor into a wretch, engineer or harvester</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.HediffTracker">
+								<def>DarkDescent_Inhibitor</def>
+								<count>1</count>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementLobotomy</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementManhunterSwine</defName>
+							<label>An Uprising Begins</label>
+							<description>Witness a swine go manhunter due to hunger for the first time, best hope it's not about to spiral out of control</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.HediffTracker">
+								<def>DarkDescent_HiddenManhunter</def>
+								<count>1</count>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementManhunterSwine</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<!-- Needs custom code
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementManhunterSwineMany</defName>
+							<label>Viva La Swinevolución</label>
+							<description>Have ten manhunter swine at the same time</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.HediffTracker">
+								<def>DarkDescent_HiddenManhunter</def>
+								<count>15</count>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementManhunterSwineMany</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+						-->
+						
+						<!-- Hediff Death Related -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementDrainedVitaeDeath</defName>
+							<label>Definitely NOT Painless</label>
+							<description>Kill a pawn by completely draining them of vitae</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.HediffDeathTracker">
+								<def>DarkDescent_VitaeExtracted</def>
+								<count>1</count>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementDrainedVitaeDeath</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementDrainedOrgoneDeath</defName>
+							<label>Drifting off to Sleep</label>
+							<description>Kill a pawn by completely draining them of orgone</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.HediffDeathTracker">
+								<def>DarkDescent_OrgoneExtracted</def>
+								<count>1</count>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementDrainedOrgoneDeath</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>DarkDescent_AchievementGruntFireDeath</defName>
+							<label>This is Fine</label>
+							<description>Witness a grunt burn to death, he didn't seem to mind</description>
+							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
+							<tab>DarkDescent_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.BondedAnimalOnFireKillTracker">
+								<kindDef>DarkDescent_Grunt</kindDef>
+								<count>1</count>
+							</tracker>
+							
+							<texPath>Achievements/DarkDescent_AchievementGruntFireDeath</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

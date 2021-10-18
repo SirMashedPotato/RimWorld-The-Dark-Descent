@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>DarkDescent_DecoctionHarvester</defName>
+    <label>servant harvester decoction</label>
+	<description>A decoction made from vitae. Gradually turns the consumer into a harvester, a servant capable of harvesting vitae from its victims. The victims unharvested vitae will be converted into an equal amount of stored vitae upon transformation.</description>
+    <descriptionHyperlinks>
+      <HediffDef>DarkDescent_DecoctionHarvester_High</HediffDef>
+      <ThingDef>DarkDescent_Harvester</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/DarkDescent_DecoctionHarvester</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+	  <WorkToMake>1200</WorkToMake>
+      <MarketValue>70</MarketValue>
+      <Mass>0.01</Mass>
+    </statBases>
+    <techLevel>Medieval</techLevel>
+	<stackLimit>25</stackLimit>
+    <ingestible Inherit="False">
+		<preferability>NeverForNutrition</preferability>
+        <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+		<foodType>Fluid, Processed</foodType>
+		<baseIngestTicks>100</baseIngestTicks>
+		<chairSearchRadius>0</chairSearchRadius>
+		<ingestSound>Ingest_Beer</ingestSound>
+		<nurseable>true</nurseable>
+		<ingestHoldUsesTable>false</ingestHoldUsesTable>
+		<ingestCommandString>Drink {0}</ingestCommandString>
+		<ingestReportString>Drinking {0}.</ingestReportString>
+		<drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>DarkDescent_DecoctionHarvester_High</hediffDef>
+          <severity>0.05</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1010</listOrder>
+      </li>
+    </comps>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+	<recipeMaker>
+      <researchPrerequisite>DarkDescent_DecoctionHarvesterResearch</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+        <li>DarkDescent_TableOrb</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <DarkDescent_Vitae>10</DarkDescent_Vitae>
+    </costList>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>DarkDescent_DecoctionHarvester_High</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>servant harvester decoction</label>
+	<description>A decoction made from vitae. Gradually turns the consumer into a harvester, a servant capable of harvesting vitae from its victims. The original creators of this decoction seem to be long extinct, and attempts at mimicking it are prone to failiure.</description>
+    <defaultLabelColor>(1,1,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <comps>
+	  <li Class="HediffCompProperties_Immunizable">
+			<severityPerDayNotImmune>0.4</severityPerDayNotImmune>
+	  </li>
+	  <li Class="DarkDescent.HediffCompProperties_HarvesterDecoction">
+		<ServantKind>DarkDescent_Harvester</ServantKind>
+	  </li>
+    </comps>
+    <stages>
+		  <li>
+			<label>lesser</label>
+			<minSeverity>0.0</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.10</offset>
+			  </li>
+			  <li>
+				<capacity>BloodFiltration</capacity>
+				<offset>0.1</offset>
+			  </li>
+			  <li>
+				<capacity>BloodPumping</capacity>
+				<offset>0.1</offset>
+			  </li>
+			  <li>
+				<capacity>Metabolism</capacity>
+				<offset>0.1</offset>
+			  </li>
+			</capMods>
+		  </li>
+		  <li>
+			<label>middling</label>
+			<minSeverity>0.3</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.25</offset>
+			  </li>
+			  <li>
+				<capacity>BloodFiltration</capacity>
+				<offset>0.25</offset>
+			  </li>
+			  <li>
+				<capacity>BloodPumping</capacity>
+				<offset>0.25</offset>
+			  </li>
+			  <li>
+				<capacity>Metabolism</capacity>
+				<offset>0.25</offset>
+			  </li>
+			  <li>
+				<capacity>Manipulation</capacity>
+				<offset>0.15</offset>
+			  </li>
+			  <li>
+				<capacity>Moving</capacity>
+				<offset>-0.15</offset>
+			  </li>
+			</capMods>
+		  </li>
+		  <li>
+			<label>greater</label>
+			<minSeverity>0.6</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.5</offset>
+			  </li>
+			  <li>
+				<capacity>BloodFiltration</capacity>
+				<offset>0.5</offset>
+			  </li>
+			  <li>
+				<capacity>BloodPumping</capacity>
+				<offset>0.5</offset>
+			  </li>
+			  <li>
+				<capacity>Metabolism</capacity>
+				<offset>0.5</offset>
+			  </li>
+			  <li>
+				<capacity>Manipulation</capacity>
+				<offset>0.25</offset>
+			  </li>
+			  <li>
+				<capacity>Moving</capacity>
+				<offset>0.25</offset>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+  </HediffDef>
+
+</Defs>

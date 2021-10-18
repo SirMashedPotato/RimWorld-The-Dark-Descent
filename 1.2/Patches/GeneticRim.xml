@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Patch for Recipes_Genes -->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Genetic Rim</li>
+		</mods> 
+				
+		<match Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/RecipeDef[defName = "GR_ExtractGenesHuman"]/ingredients/li/filter/thingDefs</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GR_ExtractGenesHuman"]/ingredients/li/filter/thingDefs</xpath>
+					<value>
+						<li>Corpse_DarkDescent_Grunt</li>
+						<li>Corpse_DarkDescent_Brute</li>
+						<li>Corpse_DarkDescent_Wretch</li>
+						<li>Corpse_DarkDescent_Tesla</li>
+						<li>Corpse_DarkDescent_Harvester</li>
+						<li>Corpse_DarkDescent_Engineer</li>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GR_ExtractGenesHuman"]/ingredients/li/filter</xpath>
+					<value>
+						<thingDefs>
+							<li>Corpse_DarkDescent_Grunt</li>
+							<li>Corpse_DarkDescent_Brute</li>
+							<li>Corpse_DarkDescent_Wretch</li>
+							<li>Corpse_DarkDescent_Tesla</li>
+							<li>Corpse_DarkDescent_Harvester</li>
+							<li>Corpse_DarkDescent_Engineer</li>
+						</thingDefs>
+					</value>
+				</nomatch>
+			</li>
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/RecipeDef[defName = "GR_ExtractGenesHuman"]/fixedIngredientFilter/thingDefs</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GR_ExtractGenesHuman"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>Corpse_DarkDescent_Grunt</li>
+							<li>Corpse_DarkDescent_Brute</li>
+							<li>Corpse_DarkDescent_Wretch</li>
+							<li>Corpse_DarkDescent_Tesla</li>
+							<li>Corpse_DarkDescent_Harvester</li>
+							<li>Corpse_DarkDescent_Engineer</li>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName = "GR_ExtractGenesHuman"]/fixedIngredientFilter</xpath>
+					<value>
+						<thingDefs>
+							<li>Corpse_DarkDescent_Grunt</li>
+							<li>Corpse_DarkDescent_Brute</li>
+							<li>Corpse_DarkDescent_Wretch</li>
+							<li>Corpse_DarkDescent_Tesla</li>
+							<li>Corpse_DarkDescent_Harvester</li>
+							<li>Corpse_DarkDescent_Engineer</li>
+						</thingDefs>
+					</value>
+				</nomatch>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "GR_ExtractGenesWolf"]/ingredients/li/filter/thingDefs</xpath>
+				<value>
+					<li>Corpse_DarkDescent_Hound</li>
+					
+
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "GR_ExtractGenesWolf"]/fixedIngredientFilter/thingDefs</xpath>
+				<value>
+					<li>Corpse_DarkDescent_Hound</li>
+
+				</value>
+			</li>
+			
+		</operations>
+		</match>
+	</Operation>
+	
+</Patch>
+

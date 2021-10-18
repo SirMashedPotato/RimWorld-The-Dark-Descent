@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Bases -->
+	
+
+  <!-- DarkDescent_BruteCleaver -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>DarkDescent_BruteCleaver</defName>
+    <label>brute cleaver</label>
+    <labelNoun>a brute cleaver</labelNoun>
+    <description>An installed brute cleaver implant.</description>
+    <descriptionHyperlinks><ThingDef>DarkDescent_BruteCleaver</ThingDef></descriptionHyperlinks>
+    <stages>
+      <li>
+        <capMods>
+			  <li>
+				<capacity>Moving</capacity>
+				<offset>-0.08</offset>
+			  </li>
+		</capMods>
+      </li>
+    </stages>
+	<comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>cleaver blade</label>
+            <capacities>
+              <li>Cut</li>
+            </capacities>
+            <power>20</power>
+            <cooldownTime>2</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          </li>
+		  <li>
+            <label>cleaver point</label>
+            <capacities>
+              <li>Stab</li>
+            </capacities>
+            <power>10</power>
+            <cooldownTime>2</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          </li>
+        </tools>
+      </li>
+    </comps>
+	<addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.8</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <spawnThingOnRemoved>DarkDescent_BruteCleaver</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>DarkDescent_BruteCleaver</defName>
+    <label>brute cleaver</label>
+    <description>A roughly crafted cleaver, designed to be attached to a servant 'brutes' arm. Mostly used for slashing through flesh and bone, the point can also be used to drag corpses.</description>
+    <descriptionHyperlinks><RecipeDef>InstallDarkDescent_BruteCleaver</RecipeDef></descriptionHyperlinks>
+    <graphicData>
+      <color>(91,64,31)</color>
+    </graphicData>
+	<costList>
+      <Steel>60</Steel>
+    </costList>
+    <techHediffsTags>
+      <li>Medieval</li>
+    </techHediffsTags>
+	<recipeMaker>
+        <researchPrerequisite>DarkDescent_BruteImplantsResearch</researchPrerequisite>
+		<recipeUsers>
+			<li>FueledSmithy</li>
+			<li>ElectricSmithy</li>
+		 </recipeUsers>
+    </recipeMaker>
+	 <statBases>
+      <WorkToMake>5000</WorkToMake>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallDarkDescent_BruteCleaver</defName>
+    <label>install brute cleaver</label>
+    <description>Install a brute cleaver.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_BruteCleaver</ThingDef>
+      <HediffDef>DarkDescent_BruteCleaver</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing brute cleaver.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DarkDescent_BruteCleaver</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DarkDescent_BruteCleaver</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hand</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>DarkDescent_BruteCleaver</addsHediff>
+	<recipeUsers Inherit="False">
+      <li>DarkDescent_Brute</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveDarkDescent_BruteCleaver</defName>
+    <label>remove brute cleaver</label>
+    <description>Remove the brute cleaver.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_BruteCleaver</ThingDef>
+      <HediffDef>DarkDescent_BruteCleaver</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing brute cleaver.</jobString>
+    <removesHediff>DarkDescent_BruteCleaver</removesHediff>
+	<recipeUsers Inherit="False">
+      <li>DarkDescent_Brute</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+  <!-- DarkDescent_BruteHammer -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>DarkDescent_BruteHammer</defName>
+    <label>brute hammer</label>
+    <labelNoun>a brute hammer</labelNoun>
+    <description>An installed brute hammer implant.</description>
+    <descriptionHyperlinks><ThingDef>DarkDescent_BruteHammer</ThingDef></descriptionHyperlinks>
+    <stages>
+      <li>
+        <capMods>
+			  <li>
+				<capacity>Moving</capacity>
+				<offset>-0.12</offset>
+			  </li>
+		</capMods>
+      </li>
+    </stages>
+	<comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>hammer head</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>20</power>
+            <cooldownTime>2</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          </li>
+        </tools>
+      </li>
+    </comps>
+	<addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.7</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <spawnThingOnRemoved>DarkDescent_BruteHammer</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>DarkDescent_BruteHammer</defName>
+    <label>brute hammer</label>
+    <description>A roughly crafted hammer, designed to be attached to a servant 'brutes' arm. Mostly used for smashing bones, even through armour.</description>
+    <descriptionHyperlinks><RecipeDef>InstallDarkDescent_BruteHammer</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>80</Steel>
+    </costList>
+	<graphicData>
+      <color>(91,64,31)</color>
+    </graphicData>
+    <techHediffsTags>
+      <li>Medieval</li>
+    </techHediffsTags>
+	<recipeMaker>
+        <researchPrerequisite>DarkDescent_BruteImplantsResearch</researchPrerequisite>
+		<recipeUsers>
+			<li>FueledSmithy</li>
+			<li>ElectricSmithy</li>
+		 </recipeUsers>
+    </recipeMaker>
+	 <statBases>
+      <WorkToMake>5000</WorkToMake>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallDarkDescent_BruteHammer</defName>
+    <label>install brute hammer</label>
+    <description>Install a brute hammer.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_BruteHammer</ThingDef>
+      <HediffDef>DarkDescent_BruteHammer</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing brute hammer.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DarkDescent_BruteHammer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DarkDescent_BruteHammer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hand</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>DarkDescent_BruteHammer</addsHediff>
+	<recipeUsers Inherit="False">
+      <li>DarkDescent_Brute</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveDarkDescent_BruteHammer</defName>
+    <label>remove brute hammer</label>
+    <description>Remove the brute hammer.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_BruteHammer</ThingDef>
+      <HediffDef>DarkDescent_BruteHammer</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing brute hammer.</jobString>
+    <removesHediff>DarkDescent_BruteHammer</removesHediff>
+	<recipeUsers Inherit="False">
+      <li>DarkDescent_Brute</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+    <!-- DarkDescent_BruteClaw -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>DarkDescent_BruteClaw</defName>
+    <label>brute claw</label>
+    <labelNoun>a brute claw</labelNoun>
+    <description>An installed brute claw implant.</description>
+    <descriptionHyperlinks><ThingDef>DarkDescent_BruteClaw</ThingDef></descriptionHyperlinks>
+    <stages>
+      <li>
+        <capMods>
+			  <li>
+				<capacity>Moving</capacity>
+				<offset>-0.05</offset>
+			  </li>
+		</capMods>
+      </li>
+    </stages>
+	<comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>claw points</label>
+            <capacities>
+              <li>Scratch</li>
+            </capacities>
+            <power>13</power>
+            <cooldownTime>1.8</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          </li>
+        </tools>
+      </li>
+    </comps>
+	<addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.9</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <spawnThingOnRemoved>DarkDescent_BruteClaw</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>DarkDescent_BruteClaw</defName>
+    <label>brute claw</label>
+    <description>A roughly crafted claw, designed to be attached to a servant 'brutes' arm. Mostly used for ripping and tearing, but also good for dragging corpses.</description>
+    <descriptionHyperlinks><RecipeDef>InstallDarkDescent_BruteClaw</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>40</Steel>
+    </costList>
+	<graphicData>
+      <color>(91,64,31)</color>
+    </graphicData>
+    <techHediffsTags>
+      <li>Medieval</li>
+    </techHediffsTags>
+	<recipeMaker>
+        <researchPrerequisite>DarkDescent_BruteImplantsResearch</researchPrerequisite>
+		<recipeUsers>
+			<li>FueledSmithy</li>
+			<li>ElectricSmithy</li>
+		 </recipeUsers>
+    </recipeMaker>
+	 <statBases>
+      <WorkToMake>5000</WorkToMake>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallDarkDescent_BruteClaw</defName>
+    <label>install brute claw</label>
+    <description>Install a brute claw.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_BruteClaw</ThingDef>
+      <HediffDef>DarkDescent_BruteClaw</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing brute claw.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DarkDescent_BruteClaw</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DarkDescent_BruteClaw</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hand</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>DarkDescent_BruteClaw</addsHediff>
+	<recipeUsers Inherit="False">
+      <li>DarkDescent_Brute</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveDarkDescent_BruteClaw</defName>
+    <label>remove brute claw</label>
+    <description>Remove the brute claw.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_BruteClaw</ThingDef>
+      <HediffDef>DarkDescent_BruteClaw</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing brute claw.</jobString>
+    <removesHediff>DarkDescent_BruteClaw</removesHediff>
+	<recipeUsers Inherit="False">
+      <li>DarkDescent_Brute</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+    <!-- DarkDescent_BruteGreatKnife -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>DarkDescent_BruteGreatKnife</defName>
+    <label>brute great knife</label>
+    <labelNoun>a brute great knife</labelNoun>
+    <description>An installed brute great knife implant.</description>
+    <descriptionHyperlinks><ThingDef>DarkDescent_BruteGreatKnife</ThingDef></descriptionHyperlinks>
+    <stages>
+      <li>
+        <capMods>
+			  <li>
+				<capacity>Moving</capacity>
+				<offset>-0.16</offset>
+			  </li>
+		</capMods>
+		<statOffsets>
+				<MoveSpeed>-0.5</MoveSpeed>
+		</statOffsets>
+		<restFallFactor>0.10</restFallFactor>
+      </li>
+    </stages>
+	<comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>great knife blade</label>
+            <capacities>
+              <li>Cut</li>
+            </capacities>
+            <power>30</power>
+            <cooldownTime>3.5</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          </li>
+		  <li>
+            <label>great knife point</label>
+            <capacities>
+              <li>Stab</li>
+            </capacities>
+            <power>15</power>
+            <cooldownTime>3</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          </li>
+        </tools>
+      </li>
+    </comps>
+	<addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.6</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <spawnThingOnRemoved>DarkDescent_BruteGreatKnife</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>DarkDescent_BruteGreatKnife</defName>
+    <label>brute great knife</label>
+    <description>A roughly crafted great knife, designed to be attached to a servant 'brutes' arm. Extremely large and heavy, simply having one attached to the arm will slow and tire the servant considerably, however the effect the knife blade has on a human body is simply astounding.</description>
+    <descriptionHyperlinks><RecipeDef>InstallDarkDescent_BruteGreatKnife</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>120</Steel>
+    </costList>
+	<graphicData>
+      <color>(91,64,31)</color>
+    </graphicData>
+    <techHediffsTags>
+      <li>Medieval</li>
+    </techHediffsTags>
+	<recipeMaker>
+        <researchPrerequisite>DarkDescent_BruteImplantsResearch</researchPrerequisite>
+		<recipeUsers>
+			<li>FueledSmithy</li>
+			<li>ElectricSmithy</li>
+		 </recipeUsers>
+    </recipeMaker>
+	 <statBases>
+      <WorkToMake>9000</WorkToMake>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallDarkDescent_BruteGreatKnife</defName>
+    <label>install brute great knife</label>
+    <description>Install a brute great knife.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_BruteGreatKnife</ThingDef>
+      <HediffDef>DarkDescent_BruteGreatKnife</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing brute great knife.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DarkDescent_BruteGreatKnife</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DarkDescent_BruteGreatKnife</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hand</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>DarkDescent_BruteGreatKnife</addsHediff>
+	<recipeUsers Inherit="False">
+      <li>DarkDescent_Brute</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveDarkDescent_BruteGreatKnife</defName>
+    <label>remove brute great knife</label>
+    <description>Remove the brute great knife.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_BruteGreatKnife</ThingDef>
+      <HediffDef>DarkDescent_BruteGreatKnife</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing brute great knife.</jobString>
+    <removesHediff>DarkDescent_BruteGreatKnife</removesHediff>
+	<recipeUsers Inherit="False">
+      <li>DarkDescent_Brute</li>
+    </recipeUsers>
+  </RecipeDef>
+  
+     <!-- DarkDescent_BruteArmour -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>DarkDescent_BruteArmour</defName>
+    <label>brute enhanced armour</label>
+    <labelNoun>a brute enhanced armour</labelNoun>
+    <description>An installed brute enhanced armour implant.</description>
+    <descriptionHyperlinks><ThingDef>DarkDescent_BruteArmour</ThingDef></descriptionHyperlinks>
+    <stages>
+      <li>
+        <capMods>
+			  <li>
+				<capacity>Moving</capacity>
+				<offset>-0.1</offset>
+			  </li>
+		</capMods>
+		<statOffsets>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+		</statOffsets>
+      </li>
+    </stages>
+    <spawnThingOnRemoved>DarkDescent_BruteArmour</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>DarkDescent_BruteArmour</defName>
+    <label>brute enhanced armour</label>
+    <description>Roughly crafted armour, designed to be attached to a servant 'brute'. Heavy and durable, increases armour rating, but decreases mobility.</description>
+    <descriptionHyperlinks><RecipeDef>InstallDarkDescent_BruteArmour</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>120</Steel>
+    </costList>
+	<graphicData>
+      <color>(91,64,31)</color>
+    </graphicData>
+    <techHediffsTags>
+      <li>Medieval</li>
+    </techHediffsTags>
+	<recipeMaker>
+        <researchPrerequisite>DarkDescent_BruteImplantsResearch</researchPrerequisite>
+		<recipeUsers>
+			<li>FueledSmithy</li>
+			<li>ElectricSmithy</li>
+		 </recipeUsers>
+    </recipeMaker>
+	 <statBases>
+      <WorkToMake>9000</WorkToMake>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallDarkDescent_BruteArmour</defName>
+    <label>install brute enhanced armour</label>
+    <description>Install a brute enhanced armour.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_BruteArmour</ThingDef>
+      <HediffDef>DarkDescent_BruteArmour</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing brute enhanced armour.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DarkDescent_BruteArmour</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DarkDescent_BruteArmour</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>DarkDescent_BruteArmour</addsHediff>
+	<recipeUsers Inherit="False">
+      <li>DarkDescent_Brute</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveDarkDescent_BruteArmour</defName>
+    <label>remove brute enhanced armour</label>
+    <description>Remove the brute enhanced armour.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_BruteArmour</ThingDef>
+      <HediffDef>DarkDescent_BruteArmour</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing brute enhanced armour.</jobString>
+    <removesHediff>DarkDescent_BruteArmour</removesHediff>
+	<recipeUsers Inherit="False">
+      <li>DarkDescent_Brute</li>
+    </recipeUsers>
+  </RecipeDef>
+
+</Defs>

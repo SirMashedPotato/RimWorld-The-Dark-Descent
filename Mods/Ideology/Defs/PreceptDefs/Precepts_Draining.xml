@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<IssueDef>
+		<defName>DarkDescent_Draining</defName>
+		<label>draining humanlikes</label>
+		<iconPath>UI/Precepts/DarkDescent_Draining</iconPath>
+	  </IssueDef>
+
+	<PreceptDef>
+		<defName>DarkDescent_Draining_Acceptable</defName>
+		<issue>DarkDescent_Draining</issue>
+		<label>acceptable</label>
+		<description>It's okay to drain someone for vitae or orgone.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>0</displayOrderInIssue>
+		<displayOrderInImpact>-100</displayOrderInImpact>
+		<associatedMemes>
+		  <li>DarkDescent_Mithraic</li>
+		</associatedMemes>
+		<requiredMemes>
+		  <li>DarkDescent_Mithraic</li>
+		</requiredMemes>
+		<comps>
+		</comps>
+	</PreceptDef>
+
+</Defs>

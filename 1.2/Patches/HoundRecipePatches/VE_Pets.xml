@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Animals Expanded — Cats and Dogs</li>
+		</mods> 
+				
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="DarkDescent_HoundCreation"]/ingredients/li[1]/filter/thingDefs</xpath>
+					<value>
+						<li>Corpse_AEXP_GermanShepherd</li>
+						<li>Corpse_AEXP_GreatDane</li>
+						<li>Corpse_AEXP_Poodle</li>
+						<li>Corpse_AEXP_Rottweiler</li>
+					</value>
+				</li>	
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[defName="DarkDescent_HoundCreation"]/fixedIngredientFilter/thingDefs</xpath>
+					<value>
+						<li>Corpse_AEXP_GermanShepherd</li>
+						<li>Corpse_AEXP_GreatDane</li>
+						<li>Corpse_AEXP_Poodle</li>
+						<li>Corpse_AEXP_Rottweiler</li>
+					</value>
+				</li>
+		
+
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<IssueDef>
+		<defName>DarkDescent_OrbSeeker</defName>
+		<label>orb knowledge</label>
+		<iconPath>UI/Precepts/DarkDescent_OrbSeeker</iconPath>
+	  </IssueDef>
+
+	<PreceptDef>
+		<defName>DarkDescent_OrbSeeker_Increased</defName>
+		<issue>DarkDescent_OrbSeeker</issue>
+		<label>increased</label>
+		<description>We have increased knowledge of the orbs.\n\nIncreases the chance of a successful interaction with an orb by 10%</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>0</displayOrderInIssue>
+		<displayOrderInImpact>-100</displayOrderInImpact>
+		<associatedMemes>
+		  <li>DarkDescent_Mithraic</li>
+		</associatedMemes>
+		<requiredMemes>
+		  <li>DarkDescent_Mithraic</li>
+		</requiredMemes>
+		<comps>
+		</comps>
+	</PreceptDef>
+
+</Defs>

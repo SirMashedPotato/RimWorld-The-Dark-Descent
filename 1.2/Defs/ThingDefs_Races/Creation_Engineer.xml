@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Engineer -->
+	
+	<ThingDef ParentName="DarkDescent_CreationBase">
+		<defName>DarkDescent_Engineer</defName>
+		<label>servant engineer</label>
+		<description>A servant created through use of an orb. A twisted abomination, an affront to nature itself.\n\nThe result of minor modifications made to the process of creating a wretch, resulting in a relatively more intelligent servant. The engineer is capable of undertaking some more complex tasks, such as repairing, deconstructing and uninstalling. They are also capable of building simple structures, though their rate of success may leave something to be desired. Increasing their consciousness and manipulation will increase their work speed and success rate.\n\nWhile the engineer may be more intelligent, it is easily distracted. They will often be seen delivering a handful of resources to a frame, then simply wandering off. As such, it is best not to rely on them for constructing highly important structures.\n\nLike the wretch, the engineer will turn rabid if it becomes too hungry. They may also be incited by other engineers, or even other wretch.</description>
+		<uiIconScale>1.35</uiIconScale>
+		<statBases>
+		  <MarketValue>600</MarketValue>
+		  <MoveSpeed>3.8</MoveSpeed>
+		</statBases>
+	    <tools>
+		  <li>
+			<label>left fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>14.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>right fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>14.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>7</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		  <li>
+			<capacities>
+			  <li>Bite</li>
+			</capacities>
+			<power>8.3</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			<chanceFactor>0.7</chanceFactor>
+		  </li>
+		</tools>
+		<comps>
+		  <li Class="DarkDescent.CompProperties_RavenousHunger">
+			<affectOthers>true</affectOthers>
+			<mentalState>Manhunter</mentalState>
+		  </li>
+		</comps>
+		<race>
+		  <body>Human</body>
+		  <baseBodySize>1.0</baseBodySize>
+		  <baseHealthScale>2.3</baseHealthScale>
+		  <baseHungerRate>1.3</baseHungerRate>
+		  <foodType>OmnivoreRoughAnimal</foodType>
+		  <useMeatFrom>Pig</useMeatFrom>
+		  <wildness>0.7</wildness>
+		  <lifeStageAges>
+			<li>
+			  <def>AnimalBaby</def>
+			  <minAge>0</minAge>
+			</li>
+			<li>
+			  <def>AnimalJuvenile</def>
+			  <minAge>0.1</minAge>
+			</li>
+			<li>
+			  <def>AnimalAdult</def>
+			  <minAge>0.4</minAge>
+			  <soundWounded>Pawn_Wildboar_Wounded</soundWounded>
+			  <soundDeath>Pawn_Wildboar_Death</soundDeath>
+			  <soundCall>Pawn_Wildboar_Call</soundCall>
+			  <soundAngry>Pawn_Wildboar_Angry</soundAngry>
+			</li>
+		  </lifeStageAges>
+		  <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.7, 1)</li>
+          <li>(2.0, 0)</li>
+        </points>
+      </litterSizeCurve>
+		</race>
+	</ThingDef>
+	  
+	<PawnKindDef Name="DarkDescent_Engineer" ParentName="AnimalKindBase">
+		<defName>DarkDescent_Engineer</defName>
+		<label>servant engineer</label>
+		<race>DarkDescent_Engineer</race>
+		<combatPower>180</combatPower>
+		<ecoSystemWeight>50</ecoSystemWeight>
+		<canArriveManhunter>true</canArriveManhunter>
+		<wildGroupSize>3~5</wildGroupSize>
+		<lifeStages>
+		  <li>
+				<bodyGraphicData>
+				  <texPath>Things/Pawn/Creation/Engineer/DarkDescent_Engineer</texPath>
+				  <drawSize>1.1</drawSize>
+				  <shadowData>
+					<volume>(0.3, 0.8, 0.4)</volume>
+					<offset>(0,0,-0.3)</offset>
+				  </shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+				  <texPath>Things/Pawn/Creation/Wretch/DarkDescent_Dessicated_Wretch</texPath>
+				  <drawSize>1.1</drawSize>
+				</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+				<bodyGraphicData>
+				  <texPath>Things/Pawn/Creation/Engineer/DarkDescent_Engineer</texPath>
+				  <drawSize>1.4</drawSize>
+				  <shadowData>
+					<volume>(0.3, 0.8, 0.4)</volume>
+					<offset>(0,0,-0.3)</offset>
+				  </shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+				  <texPath>Things/Pawn/Creation/Wretch/DarkDescent_Dessicated_Wretch</texPath>
+				  <drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+		  </li>
+		
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Creation/Engineer/DarkDescent_Engineer</texPath>
+			  <drawSize>1.6</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Creation/Wretch/DarkDescent_Dessicated_Wretch</texPath>
+			  <drawSize>1.6</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+	
+
+</Defs>

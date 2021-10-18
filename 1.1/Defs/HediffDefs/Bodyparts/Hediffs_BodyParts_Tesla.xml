@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Bases -->
+
+	<ThingDef Name="DarkDescent_BodyPartTeslaBase" ParentName="BodyPartProstheticBase" Abstract="True">
+		<costList>
+		  <Steel>40</Steel>
+		  <ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<graphicData>
+		  <color>(103,81,28)</color>
+		</graphicData>
+		<techHediffsTags>
+		  <li>Advanced</li>
+		</techHediffsTags>
+		<recipeMaker>
+			<researchPrerequisite>DarkDescent_TeslaImplantsResearch</researchPrerequisite>
+			<recipeUsers>
+				<li>TableMachining</li>
+			 </recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+
+	<RecipeDef Name="DarkDescent_SurgeryInstallTeslaImplantBase" ParentName="SurgeryInstallImplantBase" Abstract="True">
+		<recipeUsers Inherit="False">
+		  <li>DarkDescent_Tesla</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef Name="DarkDescent_SurgeryRemoveTeslaImplantBase" ParentName="SurgeryRemoveImplantBase" Abstract="True">
+		<recipeUsers Inherit="False">
+		  <li>DarkDescent_Tesla</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+   <!-- DarkDescent_TeslaLarger -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>DarkDescent_TeslaLarger</defName>
+    <label>tesla disperser</label>
+    <labelNoun>a tesla disperser</labelNoun>
+    <description>An installed tesla disperser implant.</description>
+    <descriptionHyperlinks><ThingDef>DarkDescent_TeslaLarger</ThingDef></descriptionHyperlinks>
+    <stages>
+    </stages>
+    <spawnThingOnRemoved>DarkDescent_TeslaLarger</spawnThingOnRemoved>
+	<addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.0</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="DarkDescent_BodyPartTeslaBase">
+    <defName>DarkDescent_TeslaLarger</defName>
+    <label>tesla disperser</label>
+    <description>A modified tesla coil designed to be installed onto the spine. Increases the size of electrical discharges.</description>
+    <descriptionHyperlinks><RecipeDef>InstallDarkDescent_TeslaLarger</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+  <RecipeDef ParentName="DarkDescent_SurgeryInstallTeslaImplantBase">
+    <defName>InstallDarkDescent_TeslaLarger</defName>
+    <label>install tesla disperser</label>
+    <description>Install a tesla disperser.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_TeslaLarger</ThingDef>
+      <HediffDef>DarkDescent_TeslaLarger</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing tesla disperser.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DarkDescent_TeslaLarger</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DarkDescent_TeslaLarger</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>DarkDescent_TeslaLarger</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="DarkDescent_SurgeryRemoveTeslaImplantBase">
+    <defName>RemoveDarkDescent_TeslaLarger</defName>
+    <label>remove tesla disperser</label>
+    <description>Remove the tesla disperser.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_TeslaLarger</ThingDef>
+      <HediffDef>DarkDescent_TeslaLarger</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing tesla disperser.</jobString>
+    <removesHediff>DarkDescent_TeslaLarger</removesHediff>
+  </RecipeDef>
+
+     <!-- DarkDescent_TeslaFaster -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>DarkDescent_TeslaFaster</defName>
+    <label>tesla accelerator</label>
+    <labelNoun>a tesla accelerator</labelNoun>
+    <description>An installed tesla accelerator implant.</description>
+    <descriptionHyperlinks><ThingDef>DarkDescent_TeslaFaster</ThingDef></descriptionHyperlinks>
+    <stages>
+    </stages>
+    <spawnThingOnRemoved>DarkDescent_TeslaFaster</spawnThingOnRemoved>
+	<addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.0</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="DarkDescent_BodyPartTeslaBase">
+    <defName>DarkDescent_TeslaFaster</defName>
+    <label>tesla accelerator</label>
+    <description>A modified tesla coil designed to be installed onto the spine. Decreases the cooldown time between electrical discharges.</description>
+    <descriptionHyperlinks><RecipeDef>InstallDarkDescent_TeslaFaster</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+  <RecipeDef ParentName="DarkDescent_SurgeryInstallTeslaImplantBase">
+    <defName>InstallDarkDescent_TeslaFaster</defName>
+    <label>install tesla accelerator</label>
+    <description>Install a tesla accelerator.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_TeslaFaster</ThingDef>
+      <HediffDef>DarkDescent_TeslaFaster</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing tesla accelerator.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DarkDescent_TeslaFaster</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DarkDescent_TeslaFaster</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>DarkDescent_TeslaFaster</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="DarkDescent_SurgeryRemoveTeslaImplantBase">
+    <defName>RemoveDarkDescent_TeslaFaster</defName>
+    <label>remove tesla accelerator</label>
+    <description>Remove the tesla accelerator.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_TeslaFaster</ThingDef>
+      <HediffDef>DarkDescent_TeslaFaster</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing tesla accelerator.</jobString>
+    <removesHediff>DarkDescent_TeslaFaster</removesHediff>
+  </RecipeDef>
+
+     <!-- DarkDescent_TeslaStronger -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>DarkDescent_TeslaStronger</defName>
+    <label>tesla overcharger</label>
+    <labelNoun>a tesla overcharger</labelNoun>
+    <description>An installed tesla overcharger implant.</description>
+    <descriptionHyperlinks><ThingDef>DarkDescent_TeslaStronger</ThingDef></descriptionHyperlinks>
+    <stages>
+    </stages>
+    <spawnThingOnRemoved>DarkDescent_TeslaStronger</spawnThingOnRemoved>
+	<addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.0</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="DarkDescent_BodyPartTeslaBase">
+    <defName>DarkDescent_TeslaStronger</defName>
+    <label>tesla overcharger</label>
+    <description>A modified tesla coil designed to be installed onto the spine. Increases the strength of electrical discharges.</description>
+    <descriptionHyperlinks><RecipeDef>InstallDarkDescent_TeslaStronger</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+  <RecipeDef ParentName="DarkDescent_SurgeryInstallTeslaImplantBase">
+    <defName>InstallDarkDescent_TeslaStronger</defName>
+    <label>install tesla overcharger</label>
+    <description>Install a tesla overcharger.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_TeslaStronger</ThingDef>
+      <HediffDef>DarkDescent_TeslaStronger</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing tesla overcharger.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DarkDescent_TeslaStronger</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DarkDescent_TeslaStronger</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>DarkDescent_TeslaStronger</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="DarkDescent_SurgeryRemoveTeslaImplantBase">
+    <defName>RemoveDarkDescent_TeslaStronger</defName>
+    <label>remove tesla overcharger</label>
+    <description>Remove the tesla overcharger.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_TeslaStronger</ThingDef>
+      <HediffDef>DarkDescent_TeslaStronger</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing tesla overcharger.</jobString>
+    <removesHediff>DarkDescent_TeslaStronger</removesHediff>
+  </RecipeDef>
+  
+    <!-- DarkDescent_TeslaSustainer -->
+	
+	<!-- hediffDef in version folders -->
+
+  <ThingDef ParentName="DarkDescent_BodyPartTeslaBase">
+    <defName>DarkDescent_TeslaSustainer</defName>
+    <label>tesla sustainer</label>
+    <description>A modified tesla coil designed to be installed onto the spine. Redirects electrical currents into the servant 'tesla', creating a self sustaining loop and preventing the servant from growing hungry. Modifications to the coil weaken the electrical discharge, reducing discharge strength and radius.</description>
+    <descriptionHyperlinks><RecipeDef>InstallDarkDescent_TeslaSustainer</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+  <RecipeDef ParentName="DarkDescent_SurgeryInstallTeslaImplantBase">
+    <defName>InstallDarkDescent_TeslaSustainer</defName>
+    <label>install tesla sustainer</label>
+    <description>Install a tesla sustainer.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_TeslaSustainer</ThingDef>
+      <HediffDef>DarkDescent_TeslaSustainer</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing tesla sustainer.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DarkDescent_TeslaSustainer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DarkDescent_TeslaSustainer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>DarkDescent_TeslaSustainer</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="DarkDescent_SurgeryRemoveTeslaImplantBase">
+    <defName>RemoveDarkDescent_TeslaSustainer</defName>
+    <label>remove tesla sustainer</label>
+    <description>Remove the tesla sustainer.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_TeslaSustainer</ThingDef>
+      <HediffDef>DarkDescent_TeslaSustainer</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing tesla sustainer.</jobString>
+    <removesHediff>DarkDescent_TeslaSustainer</removesHediff>
+  </RecipeDef>
+  
+  <!-- DarkDescent_TeslaCoolant -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>DarkDescent_TeslaCoolant</defName>
+    <label>tesla coolant rod</label>
+    <labelNoun>a tesla coolant rod</labelNoun>
+    <description>An installed tesla coolant rod implant.</description>
+    <descriptionHyperlinks><ThingDef>DarkDescent_TeslaCoolant</ThingDef></descriptionHyperlinks>
+    <stages>
+		<li>
+			<statOffsets>
+				<ComfyTemperatureMax>5</ComfyTemperatureMax>
+			</statOffsets>
+		</li>
+    </stages>
+    <spawnThingOnRemoved>DarkDescent_TeslaCoolant</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="DarkDescent_BodyPartTeslaBase">
+    <defName>DarkDescent_TeslaCoolant</defName>
+    <label>tesla coolant rod</label>
+    <description>A coolant rod designed to be installed in several places on a servant 'teslas' body. Dissipates excess heat produced by the tesla coils, helping to prevent overheating. Each installed rod will increase the efficiency of heat dissipation.</description>
+    <descriptionHyperlinks><RecipeDef>InstallDarkDescent_TeslaCoolant</RecipeDef></descriptionHyperlinks>
+	<costList Inherit="False">
+		<Steel>20</Steel>
+		<ComponentIndustrial>2</ComponentIndustrial>
+	</costList>
+	<recipeMaker>
+		<researchPrerequisite>DarkDescent_TeslaCoolingResearch</researchPrerequisite>
+	</recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="DarkDescent_SurgeryInstallTeslaImplantBase">
+    <defName>InstallDarkDescent_TeslaCoolant</defName>
+    <label>install tesla coolant rod</label>
+    <description>Install a tesla coolant rod.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_TeslaCoolant</ThingDef>
+      <HediffDef>DarkDescent_TeslaCoolant</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing tesla coolant rod.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DarkDescent_TeslaCoolant</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DarkDescent_TeslaCoolant</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+      <li>Humerus</li>
+      <li>Radius</li>
+      <li>Femur</li>
+      <li>Tibia</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>DarkDescent_TeslaCoolant</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="DarkDescent_SurgeryRemoveTeslaImplantBase">
+    <defName>RemoveDarkDescent_TeslaCoolant</defName>
+    <label>remove tesla coolant rod</label>
+    <description>Remove the tesla coolant rod.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_TeslaCoolant</ThingDef>
+      <HediffDef>DarkDescent_TeslaCoolant</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing tesla coolant rod.</jobString>
+    <removesHediff>DarkDescent_TeslaCoolant</removesHediff>
+  </RecipeDef>
+
+</Defs>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <WorkGiverDef>
+    <defName>DarkDescent_MakeServant</defName>
+    <label>make servant</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Doctor</workType>
+    <priorityInType>115</priorityInType>
+    <fixedBillGiverDefs>
+      <li>DarkDescent_TableOrb</li>
+    </fixedBillGiverDefs>
+    <verb>make servant</verb>
+    <gerund>making servant at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+</Defs>

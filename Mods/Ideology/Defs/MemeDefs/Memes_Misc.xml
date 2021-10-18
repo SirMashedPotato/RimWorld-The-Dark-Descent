@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Category: None -->
+
+  <MemeDef>
+    <defName>DarkDescent_Mithraic</defName>
+    <label>mithraic</label>
+    <description>The orbs are the only path to transcendence, and the cost of reaching it is irrelevant.</description>
+    <iconPath>UI/Memes/DarkDescent_Mithraic</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>999</renderOrder>
+    <requireOne>
+      <li>
+        <li>DarkDescent_Draining_Acceptable</li>
+      </li>
+	  <li>
+        <li>DarkDescent_OrbSeeker_Increased</li>
+      </li>
+	  <li>
+        <li>Execution_DontCare</li>
+        <li>Execution_RespectedIfGuilty</li>
+        <li>Execution_Required</li>
+      </li>
+	  <li>
+        <li>OrganUse_Acceptable</li>
+      </li> 
+	  <li>
+        <li>Corpses_DontCare</li>
+      </li>
+    </requireOne>
+    <consumableBuildings>
+    </consumableBuildings>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->twisted</li>
+        <li>memeAdjective->esoteric</li>
+        <li>memeAdjective->divine</li>
+        <li>memeAdjective->ascended</li>
+        <li>memeCreed->cult</li>
+        <li>memeHyphenPrefix->blood</li>
+        <li>memeHyphenPrefix->reborn</li>
+        <li>memeConcept->blood</li>
+        <li>memeConcept->flesh</li>
+        <li>memeLeaderNoun->seeker</li>
+        <li>memeLeaderNoun->illuminator</li>
+        <li>memeLeaderNoun->transcendent</li>
+        <li>memeMoralist->architect</li>
+        <li>memeMoralist->sculptor</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+    </descriptionMaker>
+    <thingStyleCategories>
+      <li>
+        <category>Morbid</category>
+        <priority>3</priority>
+      </li>
+    </thingStyleCategories>
+    <ritualsToMake>1</ritualsToMake>
+    <styleItemTags>
+    </styleItemTags>
+    <agreeableTraits>
+      <li>Psychopath</li>
+    </agreeableTraits>
+	<startingResearchProjects>
+		<li>DarkDescent_OrbTableResearch</li>
+		<li>DarkDescent_VitaeResearch</li>
+		<li>DarkDescent_HoundResearch</li>
+	</startingResearchProjects>
+  </MemeDef>
+
+</Defs>

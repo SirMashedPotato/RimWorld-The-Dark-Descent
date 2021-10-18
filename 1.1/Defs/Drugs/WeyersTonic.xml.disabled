@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>DarkDescent_WeyersTonic</defName>
+    <label>Weyer's tonic</label>
+	<description>A tonic that extends ones life, turning back the biological clock one year. The original recipe was discovered by Johann Weyer, sadly certain ingredients are almost impossible to find. The results of this modified recipe are far less potent, and leave the ingestor feeling rather unwell for a day.</description>
+    <descriptionHyperlinks>
+      <HediffDef>DarkDescent_DecoctionRegen_High</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/DarkDescent_WeyersTonic</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+	  <WorkToMake>800</WorkToMake>
+      <MarketValue>600</MarketValue>
+      <Mass>0.01</Mass>
+    </statBases>
+    <techLevel>Medieval</techLevel>
+	<stackLimit>25</stackLimit>
+    <ingestible Inherit="False">
+	    <preferability>NeverForNutrition</preferability>
+        <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+		<foodType>Fluid, Processed</foodType>
+		<baseIngestTicks>100</baseIngestTicks>
+		<chairSearchRadius>0</chairSearchRadius>
+		<ingestSound>Ingest_Beer</ingestSound>
+		<nurseable>true</nurseable>
+		<ingestHoldUsesTable>false</ingestHoldUsesTable>
+		<ingestCommandString>Drink {0}</ingestCommandString>
+		<ingestReportString>Drinking {0}.</ingestReportString>
+		<drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>DarkDescent_WeyersTonic</hediffDef>
+          <severity>1.00</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1010</listOrder>
+      </li>
+    </comps>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+	<recipeMaker>
+      <researchPrerequisite>DarkDescent_WeyersTonicResearch</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+        <li>DarkDescent_TableOrb</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <DarkDescent_Vitae>8</DarkDescent_Vitae>
+      <RawFungus>10</RawFungus>
+      <Heart>1</Heart>
+    </costList>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>DarkDescent_WeyersTonic_High</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Weyer's tonic</label>
+	<description>A tonic made from a mixture of vitae, and other ingredients. Turns back the biological clock one year, though leaves the ingestor feeling rather unwell for a day.\n\nConsuming more while recovering will not have any additional effect.</description>
+    <defaultLabelColor>(1,1,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="DarkDescent.HediffCompProperties_WeyersTonic" />
+    </comps>
+    <stages>
+      <li>
+		<vomitMtbDays>1.0</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.15</offset>
+          </li>
+		  <li>
+            <capacity>Metabolism</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

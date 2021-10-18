@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThinkTreeDef>
+		<defName>Servant_Specialty</defName>
+		<insertTag>Animal_PreWander</insertTag>
+		<insertPriority>1</insertPriority>
+		<thinkRoot Class="ThinkNode_ConditionalHasFaction">
+			<subNodes>
+				<li Class="ThinkNode_ChancePerHour_Constant">
+				  <mtbHours>1.0</mtbHours>
+				  <subNodes>
+					<!-- grunt -->
+						<li Class="ThinkNode_ConditionalPawnKind">
+							<pawnKind>DarkDescent_Grunt</pawnKind>
+							<subNodes>
+								<li Class="ThinkNode_ConditionalTrainableCompleted">
+									<trainable>Obedience</trainable>
+									<subNodes>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_Mine" />
+											</subNodes>
+										</li>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_PlantCut" />
+											</subNodes>
+										</li>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_Clean" />
+											</subNodes>
+										</li>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_Flick" />
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					<!-- wretch -->
+						<li Class="ThinkNode_ConditionalPawnKind">
+							<pawnKind>DarkDescent_Wretch</pawnKind>
+							<subNodes>
+								<li Class="ThinkNode_ConditionalTrainableCompleted">
+									<trainable>Haul</trainable>
+									<subNodes>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_Refuel" />
+											</subNodes>
+										</li>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_ConstructDeliverResourcesToFrames" />
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<li Class="ThinkNode_ConditionalTrainableCompleted">
+									<trainable>Obedience</trainable>
+									<subNodes>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_Mine" />
+											</subNodes>
+										</li>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_PlantCut" />
+											</subNodes>
+										</li>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_Clean" />
+											</subNodes>
+										</li>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_Flick" />
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					<!-- engineer -->
+						<li Class="ThinkNode_ConditionalPawnKind">
+							<pawnKind>DarkDescent_Engineer</pawnKind>
+							<subNodes>
+								<li Class="ThinkNode_ConditionalTrainableCompleted">
+									<trainable>Haul</trainable>
+									<subNodes>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_Refuel" />
+											</subNodes>
+										</li>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_ConstructDeliverResourcesToFrames" />
+											</subNodes>
+										</li>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_ConstructDeliverResourcesToBlueprints" />
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<li Class="ThinkNode_ConditionalTrainableCompleted">
+									<trainable>Obedience</trainable>
+									<subNodes>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_Repair" />
+											</subNodes>
+										</li>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_UninstallBuilding" />
+											</subNodes>
+										</li>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_DeconstructBuilding" />
+											</subNodes>
+										</li>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_ConstructFinishFrames" />
+											</subNodes>
+										</li>
+										<li Class="ThinkNode_Tagger">
+											<tagToGive>TrainedAnimalBehavior</tagToGive>
+											<subNodes>
+												<li Class="DarkDescent.JobGiver_Flick" />
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+
+</Defs>

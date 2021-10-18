@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!--
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>DarkDescent_UnfinishedServant</defName>
+		<label>unfinished servant</label>
+		<description>An unfinished servant of some kind.</description>
+		<statBases>
+		  <Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+		  <texPath>Things/Item/Unfinished/UnfinishedServant</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stuffCategories Inherit="false" />
+	</ThingDef>
+-->
+</Defs>

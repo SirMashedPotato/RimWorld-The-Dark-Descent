@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Wretch -->
+	
+	<ThingDef ParentName="DarkDescent_CreationBase">
+		<defName>DarkDescent_Wretch</defName>
+		<label>servant wretch</label>
+		<description>A servant created through use of an orb. A twisted abomination, an affront to nature itself.\n\nThe combining of human and pig, with the addition of orgone, was initially meant to create a servant that did not suffer the same conditions as the grunt and brute, namely sterility and a restrictive diet. On these fronts, the wretch was considered a success. They were a means to create a rapidly breeding workforce, stronger than most humans, and willing to eat anything.\n\nThere were however... complications.\n\nThe wretch also inherited an increased intelligence, making them capable of hauling, mining and refueling. Whilst not smart enough to perform more complicated tasks, they are smart enough to disobey orders, and even turn on their creators. While these, by themselves, are manageable, there were further complications.\n\nOne particular factory was somewhat lax in the feeding of its servant wretch. This was the first documented case of the wretch overthrowing their creators, storming the streets, and devouring everyone in the town.\n\nThus the fatal flaw of the wretch was uncovered. For when a wretch gets hungry it enters an animalistic frenzy, attacking anything that it perceives to be a food source. This will often drive other wretch into a frenzy, regardless of their hunger levels.</description>
+		<uiIconScale>1.35</uiIconScale>
+		<statBases>
+		  <MarketValue>500</MarketValue>
+		  <MoveSpeed>4.0</MoveSpeed>
+		</statBases>
+	    <tools>
+		  <li>
+			<label>left fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>12.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>right fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>12.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>7</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		  <li>
+			<capacities>
+			  <li>Bite</li>
+			</capacities>
+			<power>8.3</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			<chanceFactor>0.7</chanceFactor>
+		  </li>
+		</tools>
+		<comps>
+		  <li Class="DarkDescent.CompProperties_RavenousHunger">
+			<affectOthers>true</affectOthers>
+			<mentalState>Manhunter</mentalState>
+		  </li>
+		</comps>
+		<race>
+		  <body>Human</body>
+		  <baseBodySize>1.0</baseBodySize>
+		  <baseHealthScale>2.0</baseHealthScale>
+		  <baseHungerRate>1.2</baseHungerRate>
+		  <foodType>OmnivoreRoughAnimal</foodType>
+		  <useMeatFrom>Pig</useMeatFrom>
+		  <wildness>0.7</wildness>
+		  <lifeStageAges>
+			<li>
+			  <def>AnimalBaby</def>
+			  <minAge>0</minAge>
+			</li>
+			<li>
+			  <def>AnimalJuvenile</def>
+			  <minAge>0.1</minAge>
+			</li>
+			<li>
+			  <def>AnimalAdult</def>
+			  <minAge>0.4</minAge>
+			  <soundWounded>Pawn_Wildboar_Wounded</soundWounded>
+			  <soundDeath>Pawn_Wildboar_Death</soundDeath>
+			  <soundCall>Pawn_Wildboar_Call</soundCall>
+			  <soundAngry>Pawn_Wildboar_Angry</soundAngry>
+			</li>
+		  </lifeStageAges>
+		  <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.7, 1)</li>
+          <li>(2.0, 0)</li>
+        </points>
+      </litterSizeCurve>
+		</race>
+	</ThingDef>
+	  
+	<PawnKindDef Name="DarkDescent_Wretch" ParentName="AnimalKindBase">
+		<defName>DarkDescent_Wretch</defName>
+		<label>servant wretch</label>
+		<race>DarkDescent_Wretch</race>
+		<combatPower>180</combatPower>
+		<ecoSystemWeight>50</ecoSystemWeight>
+		<canArriveManhunter>true</canArriveManhunter>
+		<wildGroupSize>3~5</wildGroupSize>
+		<lifeStages>
+		  <li>
+				<bodyGraphicData>
+				  <texPath>Things/Pawn/Creation/Wretch/DarkDescent_Wretch</texPath>
+				  <drawSize>1.0</drawSize>
+				  <shadowData>
+					<volume>(0.3, 0.8, 0.4)</volume>
+					<offset>(0,0,-0.3)</offset>
+				  </shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+				  <texPath>Things/Pawn/Creation/Wretch/DarkDescent_Dessicated_Wretch</texPath>
+				  <drawSize>1.0</drawSize>
+				</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+				<bodyGraphicData>
+				  <texPath>Things/Pawn/Creation/Wretch/DarkDescent_Wretch</texPath>
+				  <drawSize>1.3</drawSize>
+				  <shadowData>
+					<volume>(0.3, 0.8, 0.4)</volume>
+					<offset>(0,0,-0.3)</offset>
+				  </shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+				  <texPath>Things/Pawn/Creation/Wretch/DarkDescent_Dessicated_Wretch</texPath>
+				  <drawSize>1.3</drawSize>
+				</dessicatedBodyGraphicData>
+		  </li>
+		
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Creation/Wretch/DarkDescent_Wretch</texPath>
+			  <drawSize>1.5</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Creation/Wretch/DarkDescent_Dessicated_Wretch</texPath>
+			  <drawSize>1.5</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+	
+
+</Defs>

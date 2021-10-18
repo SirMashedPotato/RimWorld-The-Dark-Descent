@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- DarkDescent_TeslaSustainer -->
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>DarkDescent_TeslaSustainer</defName>
+    <label>tesla sustainer</label>
+    <labelNoun>a tesla sustainer</labelNoun>
+    <description>An installed tesla sustainer implant.</description>
+    <descriptionHyperlinks><ThingDef>DarkDescent_TeslaSustainer</ThingDef></descriptionHyperlinks>
+	<disablesNeed>Food</disablesNeed>
+    <stages>
+    </stages>
+    <spawnThingOnRemoved>DarkDescent_TeslaSustainer</spawnThingOnRemoved>
+	<addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.0</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+</Defs>

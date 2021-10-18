@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Harvester damages -->
+	
+	<DamageDef ParentName="Bite">
+		<defName>DarkDescent_HarvesterBite</defName>
+		<label>harvester bite</label>
+		<workerClass>DarkDescent.DamageWorker_HarvesterBite</workerClass>
+	</DamageDef>
+	
+	<DamageDef ParentName="Scratch">
+		<defName>DarkDescent_HarvesterScratch</defName>
+		<label>harvester scratch</label>
+		<workerClass>DarkDescent.DamageWorker_HarvesterScratch</workerClass>
+	</DamageDef>
+
+</Defs>

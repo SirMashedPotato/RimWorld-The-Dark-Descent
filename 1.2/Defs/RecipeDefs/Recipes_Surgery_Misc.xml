@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+	<researchPrerequisite>DarkDescent_VitaeResearch</researchPrerequisite>
+    <defName>DarkDescent_ExtractVitae</defName>
+    <label>extract vitae</label>
+    <description>Extract vitae from a humanlike.</description>
+    <workerClass>DarkDescent.Recipe_ExtractVitae</workerClass>
+    <jobString>Extracting vitae.</jobString>
+    <workAmount>2000</workAmount>
+	<hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>true</isViolation>
+    <targetsBodyPart>false</targetsBodyPart>
+    <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+	<ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryFlesh">
+    <researchPrerequisite>DarkDescent_OrgoneResearch</researchPrerequisite>
+    <defName>DarkDescent_ExtractOrgone</defName>
+    <label>extract orgone</label>
+    <description>Extract orgone from a humanlike.</description>
+    <workerClass>DarkDescent.Recipe_ExtractOrgone</workerClass>
+    <jobString>Extracting orgone.</jobString>
+    <workAmount>2000</workAmount>
+	<hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>true</isViolation>
+    <targetsBodyPart>false</targetsBodyPart>
+    <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+	<ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  
+  <!-- Harvester -->
+  
+  <RecipeDef ParentName="SurgeryFlesh">
+	<researchPrerequisite>DarkDescent_VitaeResearch</researchPrerequisite>
+    <defName>DarkDescent_HarvestVitae</defName>
+    <label>harvest vitae</label>
+    <description>Harvest stored vitae from a servant 'harvester', leaving 10% of stored vitae behind.</description>
+    <workerClass>DarkDescent.Recipe_HarvestVitae</workerClass>
+    <jobString>Extracting vitae.</jobString>
+    <workAmount>2000</workAmount>
+	<hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>false</isViolation>
+    <targetsBodyPart>false</targetsBodyPart>
+    <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+	<ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+	<recipeUsers Inherit="False">
+		<li>DarkDescent_Harvester</li>
+	</recipeUsers>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryFlesh">
+	<researchPrerequisite>DarkDescent_VitaeResearch</researchPrerequisite>
+    <defName>DarkDescent_HarvestVitaeComplete</defName>
+    <label>completely harvest vitae</label>
+    <description>Completely harvest stored vitae from a servant 'harvester', leaving no vitae behind.</description>
+    <workerClass>DarkDescent.Recipe_HarvestVitaeComplete</workerClass>
+    <jobString>Extracting vitae.</jobString>
+    <workAmount>2000</workAmount>
+	<hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>false</isViolation>
+    <targetsBodyPart>false</targetsBodyPart>
+    <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+	<ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+	<recipeUsers Inherit="False">
+		<li>DarkDescent_Harvester</li>
+	</recipeUsers>
+  </RecipeDef>
+  
+</Defs>

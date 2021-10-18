@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{51047143-EB46-4A7F-85C4-3898BD8353B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DarkDescent</RootNamespace>
+    <AssemblyName>DarkDescent</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comp\CompTargetEffect_VitaeResurrect.cs" />
+    <Compile Include="Comp\CompTargetable_SinglePawnHumanlike.cs" />
+    <Compile Include="Comp\CompTargetEffect_ExtractVitae.cs" />
+    <Compile Include="Comp\CompProperties_VitaeHunger.cs" />
+    <Compile Include="Comp\Comp_TeslaDischarge.cs" />
+    <Compile Include="Comp\CompProperties_RavenousHunger.cs" />
+    <Compile Include="Comp\CompProperties_UseEffect_ActivateServant.cs" />
+    <Compile Include="Comp\CompUseEffect_ActivateServant.cs" />
+    <Compile Include="Comp\Comp_RavenousHunger.cs" />
+    <Compile Include="Comp\CompProperties_TeslaDischarge.cs" />
+    <Compile Include="Comp\HediffCompProperties_HarversterDecoction.cs" />
+    <Compile Include="Comp\HediffComp_HarversterDecoction.cs" />
+    <Compile Include="Comp\Comp_VitaeHunger.cs" />
+    <Compile Include="Comp\HediffGiver_RandomHumanlike.cs" />
+    <Compile Include="Comp\HediffCompProperties_HealWounds.cs" />
+    <Compile Include="Comp\HediffComp_HealWounds.cs" />
+    <Compile Include="Settings\ModSettings_Utility.cs" />
+    <Compile Include="Settings\DarkDescent_ModSettings.cs" />
+    <Compile Include="Settings\DarkDescent_Mod.cs" />
+    <Compile Include="JobDriver\JobDriver_VitaeResurrect.cs" />
+    <Compile Include="JobDriver\JobDriver_Repair.cs" />
+    <Compile Include="JobDriver\JobDriver_Deconstruct.cs" />
+    <Compile Include="JobDriver\Abstract_JobDriver_RemoveBuilding.cs" />
+    <Compile Include="JobDriver\JobDriver_ConstructFinishFrame.cs" />
+    <Compile Include="JobGiver\Abstract_JobGiver_RemoveBuilding.cs" />
+    <Compile Include="JobGiver\JobGiver_ConstructFinishFrames.cs" />
+    <Compile Include="JobGiver\JobGiver_DeconstructBuilding.cs" />
+    <Compile Include="JobGiver\JobGiver_UninstallBuilding.cs" />
+    <Compile Include="JobGiver\JobGiver_ConstructDeliverResourcesToFrames.cs" />
+    <Compile Include="JobGiver\JobGiver_ConstructDeliverResourcesToBlueprints.cs" />
+    <Compile Include="JobGiver\JobGiver_Flick.cs" />
+    <Compile Include="JobGiver\JobGiver_Clean.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="Worker\DamageWorker_HarvesterScratch.cs" />
+    <Compile Include="DefOf\JobDefOf.cs" />
+    <Compile Include="JobDriver\JobDriver_ExtractVitae.cs" />
+    <Compile Include="Recipe\Recipe_HarvestVitae.cs" />
+    <Compile Include="Recipe\Recipe_HarvestVitaeComplete.cs" />
+    <Compile Include="Worker\DamageWorker_HarvesterBite.cs" />
+    <Compile Include="DefOf\PawnKindDefOf.cs" />
+    <Compile Include="Worker\DeathActionWorker_Tesla.cs" />
+    <Compile Include="DefOf\HediffDefOf.cs" />
+    <Compile Include="JobGiver\JobGiver_Mine.cs" />
+    <Compile Include="JobGiver\JobGiver_PlantCut.cs" />
+    <Compile Include="JobGiver\JobGiver_Refuel.cs" />
+    <Compile Include="JobGiver\JobGiver_Repair.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recipe\Recipe_ExtractOrgone.cs" />
+    <Compile Include="Recipe\Recipe_ExtractVitae.cs" />
+    <Compile Include="DefOf\ThingDefOf.cs" />
+    <Compile Include="DefOf\ThoughtDefOf.cs" />
+    <Compile Include="JobGiver\Abstract_JobGiver_ConstructDeliverResources.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -133,9 +133,8 @@
 		<hediffClass>HediffWithComps</hediffClass>
 		<defaultLabelColor>(1.0, 0.4, 0.4)</defaultLabelColor>
 		<maxSeverity>1</maxSeverity>
-		<lethalSeverity>1.001</lethalSeverity>
+		<isBad>false</isBad>
 		<scenarioCanAdd>true</scenarioCanAdd>
-		<chronic>true</chronic>
 		<comps>
 		</comps>
 		<stages>
@@ -297,6 +296,7 @@
 		<hediffClass>HediffWithComps</hediffClass>
 		<defaultLabelColor>(1,1,0.5)</defaultLabelColor>
 		<makesSickThought>false</makesSickThought>
+		<isBad>false</isBad>
 		<maxSeverity>1</maxSeverity>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<comps>
@@ -529,6 +529,7 @@
 		<hediffClass>HediffWithComps</hediffClass>
 		<defaultLabelColor>(1,1,0.5)</defaultLabelColor>
 		<makesSickThought>false</makesSickThought>
+		<isBad>false</isBad>
 		<maxSeverity>1</maxSeverity>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<comps>

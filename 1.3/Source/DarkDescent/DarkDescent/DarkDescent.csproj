@@ -52,22 +52,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Comp\CompTargetEffect_VitaeResurrect.cs" />
-    <Compile Include="Comp\CompTargetable_SinglePawnHumanlike.cs" />
-    <Compile Include="Comp\CompTargetEffect_ExtractVitae.cs" />
+    <Compile Include="CompTarget\CompTargetEffect_VitaeResurrect.cs" />
+    <Compile Include="CompTarget\CompTargetable_SinglePawnHumanlike.cs" />
+    <Compile Include="CompTarget\CompTargetEffect_ExtractVitae.cs" />
     <Compile Include="Comp\CompProperties_VitaeHunger.cs" />
     <Compile Include="Comp\Comp_TeslaDischarge.cs" />
     <Compile Include="Comp\CompProperties_RavenousHunger.cs" />
     <Compile Include="Comp\CompProperties_UseEffect_ActivateServant.cs" />
-    <Compile Include="Comp\CompUseEffect_ActivateServant.cs" />
+    <Compile Include="CompUse\CompUseEffect_ActivateServant.cs" />
     <Compile Include="Comp\Comp_RavenousHunger.cs" />
     <Compile Include="Comp\CompProperties_TeslaDischarge.cs" />
-    <Compile Include="Comp\HediffCompProperties_HarversterDecoction.cs" />
-    <Compile Include="Comp\HediffComp_HarversterDecoction.cs" />
+    <Compile Include="HediffComp\HediffCompProperties_HarversterDecoction.cs" />
+    <Compile Include="HediffComp\HediffCompProperties_WeyersTonic.cs" />
+    <Compile Include="HediffComp\HediffComp_HarversterDecoction.cs" />
     <Compile Include="Comp\Comp_VitaeHunger.cs" />
-    <Compile Include="Comp\HediffGiver_RandomHumanlike.cs" />
-    <Compile Include="Comp\HediffCompProperties_HealWounds.cs" />
-    <Compile Include="Comp\HediffComp_HealWounds.cs" />
+    <Compile Include="HediffComp\HediffComp_WeyersTonic.cs" />
+    <Compile Include="HediffGiver\HediffGiver_RandomHumanlike.cs" />
+    <Compile Include="HediffComp\HediffCompProperties_HealWounds.cs" />
+    <Compile Include="HediffComp\HediffComp_HealWounds.cs" />
+    <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_DecreaseAge.cs" />
     <Compile Include="Settings\ModSettings_Utility.cs" />
     <Compile Include="Settings\DarkDescent_ModSettings.cs" />
     <Compile Include="Settings\DarkDescent_Mod.cs" />

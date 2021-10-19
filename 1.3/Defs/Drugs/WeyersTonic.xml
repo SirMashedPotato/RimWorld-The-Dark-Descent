@@ -9,7 +9,7 @@
       <HediffDef>DarkDescent_DecoctionRegen_High</HediffDef>
     </descriptionHyperlinks>
     <graphicData>
-      <texPath>Things/Item/Drug/DarkDescent_WeyersTonic</texPath>
+      <texPath>Things/Item/Drug/DarkDescent_WeyerTonic</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <rotatable>false</rotatable>
@@ -33,8 +33,12 @@
 		<ingestReportString>Drinking {0}.</ingestReportString>
 		<drugCategory>Medical</drugCategory>
       <outcomeDoers>
+	    <li Class="DarkDescent.IngestionOutcomeDoer_DecreaseAge">
+			<years>1</years>
+			<associatedHediff>DarkDescent_WeyersTonic_High</associatedHediff>
+        </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>DarkDescent_WeyersTonic</hediffDef>
+          <hediffDef>DarkDescent_WeyersTonic_High</hediffDef>
           <severity>1.00</severity>
         </li>
       </outcomeDoers>
@@ -55,15 +59,15 @@
       </recipeUsers>
     </recipeMaker>
     <costList>
-      <DarkDescent_Vitae>8</DarkDescent_Vitae>
+      <DarkDescent_Vitae>15</DarkDescent_Vitae>
       <RawFungus>10</RawFungus>
-      <Heart>1</Heart>
+	  <Heart>1</Heart>
     </costList>
   </ThingDef>
 
   <HediffDef>
     <defName>DarkDescent_WeyersTonic_High</defName>
-    <hediffClass>HediffWithComps</hediffClass>
+    <hediffClass>Hediff_High</hediffClass>
     <label>Weyer's tonic</label>
 	<description>A tonic made from a mixture of vitae, and other ingredients. Turns back the biological clock one year, though leaves the ingestor feeling rather unwell for a day.\n\nConsuming more while recovering will not have any additional effect.</description>
     <defaultLabelColor>(1,1,0.5)</defaultLabelColor>
@@ -71,8 +75,11 @@
     <maxSeverity>1.0</maxSeverity>
     <isBad>false</isBad>
     <comps>
-      <li Class="DarkDescent.HediffCompProperties_WeyersTonic" />
-    </comps>
+		<li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-1</severityPerDay>
+			<showHoursToRecover>true</showHoursToRecover>
+		 </li>
+	</comps>
     <stages>
       <li>
 		<vomitMtbDays>1.0</vomitMtbDays>

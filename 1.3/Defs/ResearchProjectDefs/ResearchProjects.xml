@@ -214,7 +214,7 @@
 	<ResearchProjectDef>
 		<defName>DarkDescent_TeslaImplantsResearch</defName>
 		<label>tesla coil upgrades</label>
-		<description>From studying the servant 'tesla', you have devised several ways of creating implants that will improve their electrical capabilites.</description>
+		<description>From studying the servant 'tesla', you have devised several ways of creating implants that will improve their electrical capabilities.</description>
 		<baseCost>2000</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
@@ -257,35 +257,34 @@
 	</ResearchProjectDef>
 	
 	<ResearchProjectDef>
-		<defName>DarkDescent_InfusionResurrectionResearch</defName>
-		<label>resurrective infusion</label>
-		<description>From studying ancient texts of unknown origin, you have discovered device capable of resurrecting the dead.</description>
-		<baseCost>5000</baseCost>
-		<techLevel>Industrial</techLevel>
-		<researchViewX>1.00</researchViewX>
-		<researchViewY>4.00</researchViewY>
-		<tab>DarkDescent_Tab</tab>
-		<prerequisites>
-			<li>DarkDescent_DecoctionRegenerationResearch</li>
-		</prerequisites>
-	</ResearchProjectDef>
-	
-	<!--
-	<ResearchProjectDef>
 		<defName>DarkDescent_WeyersTonicResearch</defName>
 		<label>Weyer's Tonic</label>
 		<description>From studying manuscripts recovered from Brennenburg Castle, you have pieced together, with some adjustments, the methods used to create Weyer's Tonic, a mixture capable of turning back the biological clock.</description>
 		<baseCost>5000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<researchViewX>1.00</researchViewX>
-		<researchViewY>5.00</researchViewY>
+		<researchViewY>4.00</researchViewY>
 		<tab>DarkDescent_Tab</tab>
 		<prerequisites>
-			<li>DarkDescent_VitaeResearch</li>
+			<li>DarkDescent_OrgoneResearch</li>
+			<li>DarkDescent_DecoctionRegenerationResearch</li>
 		</prerequisites>
 	</ResearchProjectDef>
-	-->
 	
+	<ResearchProjectDef>
+		<defName>DarkDescent_InfusionResurrectionResearch</defName>
+		<label>resurrective infusion</label>
+		<description>From studying ancient texts of unknown origin, you have discovered device capable of resurrecting the dead.</description>
+		<baseCost>5000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>4.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_WeyersTonicResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
 	<!-- Other -->
 	
 	<ResearchProjectDef>
@@ -316,5 +315,7 @@
 			<li>DarkDescent_VitaeResearch</li>
 		</prerequisites>
 	</ResearchProjectDef>
+	
+	<!-- orb studies -->
 	
 </Defs>

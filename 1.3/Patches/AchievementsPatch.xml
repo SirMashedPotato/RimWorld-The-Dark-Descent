@@ -132,34 +132,7 @@
 							<points>10</points>
 						</AchievementsExpanded.AchievementDef>
 						-->
-						
-						<!-- Craft servants * Likely needs custom code * -->
-						
-						
-						
-						<!-- Obtain first of each servant -->
-						
-						<!-- Needs custom code
-						<AchievementsExpanded.AchievementDef>
-							<defName>DarkDescent_AchievementCreateFirst</defName>
-							<label>The First of Many</label>
-							<description>Create your first servant of any kind</description>
-							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
-							<tab>DarkDescent_AchievementsTab</tab>
-							<tracker Class="AchievementsExpanded.KindDefTracker">
-								<kindDefs>
-									<li>
-										<key>DarkDescent_Hound</key>
-										<value>1</value>
-									</li>
-								</kindDefs>
-							</tracker>
-							
-							<texPath>Achievements/DarkDescent_AchievementCreateFirst</texPath>
-							<points>5</points>
-						</AchievementsExpanded.AchievementDef>
-						-->
-						
+
 						<!-- Needs custom code
 						<AchievementsExpanded.AchievementDef>
 							<defName>DarkDescent_AchievementCreateFifty</defName>
@@ -465,24 +438,7 @@
 							<texPath>Achievements/DarkDescent_AchievementManhunterSwine</texPath>
 							<points>15</points>
 						</AchievementsExpanded.AchievementDef>
-						
-						<!-- Needs custom code
-						<AchievementsExpanded.AchievementDef>
-							<defName>DarkDescent_AchievementManhunterSwineMany</defName>
-							<label>Viva La Swinevolución</label>
-							<description>Have ten manhunter swine at the same time</description>
-							<bgtexPath>Achievements/DarkDescent_AchievementBackground</bgtexPath>
-							<tab>DarkDescent_AchievementsTab</tab>
-							<tracker Class="AchievementsExpanded.HediffTracker">
-								<def>DarkDescent_HiddenManhunter</def>
-								<count>15</count>
-							</tracker>
-							
-							<texPath>Achievements/DarkDescent_AchievementManhunterSwineMany</texPath>
-							<points>25</points>
-						</AchievementsExpanded.AchievementDef>
-						-->
-						
+
 						<!-- Hediff Death Related -->
 						
 						<AchievementsExpanded.AchievementDef>

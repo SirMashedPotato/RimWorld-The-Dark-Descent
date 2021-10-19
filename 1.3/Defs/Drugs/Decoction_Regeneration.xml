@@ -61,7 +61,7 @@
 
   <HediffDef>
     <defName>DarkDescent_DecoctionRegen_High</defName>
-    <hediffClass>HediffWithComps</hediffClass>
+    <hediffClass>Hediff_High</hediffClass>
     <label>regenerative decoction</label>
 	<description>A decoction made from vitae. Consuming it causes cells to rapidly regenerate, healing wounds over time, and potentially healing permanent wounds over a much longer period of time. While this is perfectly safe for orb servants, due to their reanimated and vitae infused nature, the effect can cause runaway cellular regeneration in living flesh.</description>
     <defaultLabelColor>(1,1,0.5)</defaultLabelColor>
@@ -71,6 +71,10 @@
     <comps>
       <li Class="HediffCompProperties_HealPermanentWounds" />
       <li Class="DarkDescent.HediffCompProperties_HealWounds" />
+	  <li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-0.3</severityPerDay>
+			<showHoursToRecover>true</showHoursToRecover>
+	  </li>
     </comps>
     <stages>
       <li>

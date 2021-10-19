@@ -40,7 +40,8 @@ namespace DarkDescent
 			if (pawn.health.hediffSet.HasHediff(HediffDefOf.DarkDescent_TeslaLarger)) actualRadius = Props.largerRadius;
 			if (pawn.health.hediffSet.HasHediff(HediffDefOf.DarkDescent_TeslaStronger)) actualDamage = Props.higherDamage;
 
-			if (pawn.health.hediffSet.HasHediff(HediffDefOf.DarkDescent_TeslaSustainer))
+			if (pawn.health.hediffSet.HasHediff(HediffDefOf.DarkDescent_TeslaSustainer) 
+				|| (LoadedModManager.RunningModsListForReading.Any(x => x.Name == "Vanilla Expanded Framework") && pawn.health.hediffSet.HasHediff(HediffDef.Named("DarkDescent_TeslaCannon"))))
 			{
 				actualDamage -= Props.lowerDamage;
 				actualRadius -= Props.lowerRadius;

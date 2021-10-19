@@ -12,7 +12,7 @@
 				<!-- give select animals ash-resistant -->
 				
 				<li Class="PatchOperationAddModExtension">
-					<xpath>/Defs/ThingDef[defName="DarkDescent_Brute" or defName="DarkDescent_Grunt" or defName="DarkDescent_Harvester"]</xpath>
+					<xpath>/Defs/ThingDef[defName="DarkDescent_Brute" or defName="DarkDescent_Grunt" or defName="DarkDescent_Harvester" or defName="DarkDescent_Goliath"]</xpath>
 					<value>
 						<li Class="MorrowRim.ExtendedRaceProperties">
 							<ashResistant>Resistant</ashResistant>

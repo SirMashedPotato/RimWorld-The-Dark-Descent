@@ -12,22 +12,10 @@
 	<hideBodyPartNames>true</hideBodyPartNames>
     <isViolation>true</isViolation>
     <targetsBodyPart>false</targetsBodyPart>
-    <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
-	<ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>Medicine</li>
-          </categories>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <categories>
-        <li>Medicine</li>
-      </categories>
-    </fixedIngredientFilter>
+    <surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+    <skillRequirements>
+      <Medicine>3</Medicine>
+    </skillRequirements>
   </RecipeDef>
   
   <RecipeDef ParentName="SurgeryFlesh">
@@ -41,22 +29,10 @@
 	<hideBodyPartNames>true</hideBodyPartNames>
     <isViolation>true</isViolation>
     <targetsBodyPart>false</targetsBodyPart>
-    <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
-	<ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>Medicine</li>
-          </categories>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <categories>
-        <li>Medicine</li>
-      </categories>
-    </fixedIngredientFilter>
+    <surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+    <skillRequirements>
+      <Medicine>3</Medicine>
+    </skillRequirements>
   </RecipeDef>
   
   <!-- Harvester -->
@@ -72,22 +48,10 @@
 	<hideBodyPartNames>true</hideBodyPartNames>
     <isViolation>false</isViolation>
     <targetsBodyPart>false</targetsBodyPart>
-    <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
-	<ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>Medicine</li>
-          </categories>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <categories>
-        <li>Medicine</li>
-      </categories>
-    </fixedIngredientFilter>
+    <surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
 	<recipeUsers Inherit="False">
 		<li>DarkDescent_Harvester</li>
 	</recipeUsers>
@@ -104,22 +68,10 @@
 	<hideBodyPartNames>true</hideBodyPartNames>
     <isViolation>false</isViolation>
     <targetsBodyPart>false</targetsBodyPart>
-    <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
-	<ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>Medicine</li>
-          </categories>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <categories>
-        <li>Medicine</li>
-      </categories>
-    </fixedIngredientFilter>
+    <surgeryIgnoreEnvironment>true</surgeryIgnoreEnvironment>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
 	<recipeUsers Inherit="False">
 		<li>DarkDescent_Harvester</li>
 	</recipeUsers>

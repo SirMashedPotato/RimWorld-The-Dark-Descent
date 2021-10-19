@@ -12,6 +12,7 @@
 		  <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
 		  <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
 		  <MoveSpeed>2.0</MoveSpeed>
+		  <InjuryHealingFactor>1.5</InjuryHealingFactor>
 		  <MarketValue>700</MarketValue>
 		</statBases>
 		<tools>
@@ -97,7 +98,7 @@
 		  <li>
 			<bodyGraphicData>
 			  <texPath>Things/Pawn/Creation/Goliath/DarkDescent_Goliath</texPath>
-			  <drawSize>1.65</drawSize>
+			  <drawSize>1.9</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.8, 0.4)</volume>
 				<offset>(0,0,-0.3)</offset>
@@ -105,7 +106,7 @@
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Things/Pawn/Creation/Goliath/DarkDescent_Dessicated_Goliath</texPath>
-			  <drawSize>1.65</drawSize>
+			  <drawSize>1.9</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		</lifeStages>

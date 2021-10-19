@@ -356,7 +356,7 @@
 							<texPath>Achievements/DarkDescent_AchievementCreateAll</texPath>
 							<points>15</points>
 						</AchievementsExpanded.AchievementDef>
-						<!--
+
 						<AchievementsExpanded.AchievementDef>
 							<defName>DarkDescent_AchievementCreateGoliath</defName>
 							<label>Say Hello to My Little Friend</label>
@@ -375,7 +375,7 @@
 							<texPath>Achievements/DarkDescent_AchievementCreateGoliath</texPath>
 							<points>15</points>
 						</AchievementsExpanded.AchievementDef>
-						-->
+	
 						<!-- Servant Hediff Related -->
 						
 						<AchievementsExpanded.AchievementDef>

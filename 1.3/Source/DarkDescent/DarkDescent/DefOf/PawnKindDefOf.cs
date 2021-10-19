@@ -19,6 +19,6 @@ namespace DarkDescent
 		public static PawnKindDef DarkDescent_Harvester;
 		public static PawnKindDef DarkDescent_Engineer;
 		public static PawnKindDef DarkDescent_Hound;
-		//public static PawnKindDef DarkDescent_Goliath;
+		public static PawnKindDef DarkDescent_Goliath;
 	}
 }

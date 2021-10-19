@@ -234,7 +234,23 @@
   
     <!-- DarkDescent_TeslaSustainer -->
 	
-	<!-- hediffDef in version folders -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>DarkDescent_TeslaSustainer</defName>
+    <label>tesla sustainer</label>
+    <labelNoun>a tesla sustainer</labelNoun>
+    <description>An installed tesla sustainer implant.</description>
+    <descriptionHyperlinks><ThingDef>DarkDescent_TeslaSustainer</ThingDef></descriptionHyperlinks>
+	<disablesNeeds>
+		<li>Food</li>
+	</disablesNeeds>
+    <stages>
+    </stages>
+    <spawnThingOnRemoved>DarkDescent_TeslaSustainer</spawnThingOnRemoved>
+	<addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.0</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
 
   <ThingDef ParentName="DarkDescent_BodyPartTeslaBase">
     <defName>DarkDescent_TeslaSustainer</defName>

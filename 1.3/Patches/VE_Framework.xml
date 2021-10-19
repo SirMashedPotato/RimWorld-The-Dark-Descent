@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Expanded Framework</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+
+				<!-- -->
+				
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs</xpath>
+					<value>
+				
+						<MVCF.ModDef>
+							<defName>MVCF_DarkDescent</defName>
+							<label>RimWorld - The Dark Descent</label>
+							<description>Adds in a new hediff for the tesla</description>
+							<Features>
+								<RangedAnimals>true</RangedAnimals>
+								<HediffVerbs>true</HediffVerbs>
+								<IntegratedToggle>true</IntegratedToggle>
+							</Features>
+						</MVCF.ModDef>
+						
+						<!-- new stuff -->
+						
+						<ResearchProjectDef>
+							<defName>DarkDescent_TeslaRangedImplant</defName>
+							<label>tesla cannon</label>
+							<description>From studying the servant 'tesla', you have devised a way to convert one of it's tesla coils into a ranged weapon.</description>
+							<baseCost>1000</baseCost>
+							<techLevel>Industrial</techLevel>
+							<prerequisites>
+								<li>DarkDescent_TeslaImplantsResearch</li>
+							</prerequisites>
+							<researchViewX>5.00</researchViewX>
+							<researchViewY>4.00</researchViewY>
+							<tab>DarkDescent_Tab</tab>
+						</ResearchProjectDef>
+						
+						<!-- DarkDescent_TeslaSustainer -->
+	
+							<HediffDef ParentName="AddedBodyPartBase">
+								<defName>DarkDescent_TeslaCannon</defName>
+								<label>tesla Cannon</label>
+								<labelNoun>a tesla Cannon</labelNoun>
+								<description>An installed tesla Cannon implant.</description>
+								<descriptionHyperlinks><ThingDef>DarkDescent_TeslaCannon</ThingDef></descriptionHyperlinks>
+								<stages>
+								</stages>
+								<spawnThingOnRemoved>DarkDescent_TeslaCannon</spawnThingOnRemoved>
+								<addedPartProps>
+								  <solid>true</solid>
+								  <partEfficiency>1.0</partEfficiency>
+								</addedPartProps>
+								<!-- actual pew pew part -->
+								<comps>
+									<li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
+									  <verbs>
+										<li>
+										  <verbClass>Verb_Shoot</verbClass>
+										  <label>tesla cannon</label>
+										  <hasStandardCommand>true</hasStandardCommand>
+										  <defaultProjectile>DarkDescent_Bullet_TeslaCannon</defaultProjectile>
+										  <warmupTime>3.4</warmupTime>
+										  <range>29.9</range>
+										  <soundCast>Shot_ChargeBlaster</soundCast>
+										  <soundCastTail>GunTail_Heavy</soundCastTail>
+										  <muzzleFlashScale>9</muzzleFlashScale>
+										  <!--<commandIcon>Things/Item/Equipment/WeaponRanged/Minigun</commandIcon>-->
+										</li>
+									  </verbs>
+									  <verbProps>
+										<li>
+										  <label>tesla cannon</label>
+										  <draw>false</draw>
+										  <canBeToggled>true</canBeToggled>
+										  <canFireIndependently>false</canFireIndependently>
+										</li>
+									  </verbProps>
+									</li>
+								</comps>
+							</HediffDef>
+
+							<ThingDef ParentName="DarkDescent_BodyPartTeslaBase">
+								<defName>DarkDescent_TeslaCannon</defName>
+								<label>tesla Cannon</label>
+								<description>A modified tesla coil designed to be installed onto the spine. Changes made to the design of the coil allow the servant to fire high velocity projectiles, which ar particularly effective against mechanoids. Modifications to the coil weaken the electrical discharge, reducing discharge strength and radius.</description>
+								<descriptionHyperlinks><RecipeDef>InstallDarkDescent_TeslaCannon</RecipeDef></descriptionHyperlinks>
+								<costList Inherit="false">
+								  <Steel>80</Steel>
+								  <ComponentIndustrial>6</ComponentIndustrial>
+								</costList>
+								<recipeMaker>
+									<researchPrerequisite>DarkDescent_TeslaRangedImplant</researchPrerequisite>
+									<recipeUsers>
+										<li>TableMachining</li>
+									 </recipeUsers>
+								</recipeMaker>
+							</ThingDef>
+
+							<RecipeDef ParentName="DarkDescent_SurgeryInstallTeslaImplantBase">
+								<defName>InstallDarkDescent_TeslaCannon</defName>
+								<label>install tesla Cannon</label>
+								<description>Install a tesla Cannon.</description>
+								<descriptionHyperlinks>
+								  <ThingDef>DarkDescent_TeslaCannon</ThingDef>
+								  <HediffDef>DarkDescent_TeslaCannon</HediffDef>
+								</descriptionHyperlinks>
+								<jobString>Installing tesla Cannon.</jobString>
+								<ingredients>
+								  <li>
+									<filter>
+									  <thingDefs>
+										<li>DarkDescent_TeslaCannon</li>
+									  </thingDefs>
+									</filter>
+									<count>1</count>
+								  </li>
+								</ingredients>
+								<fixedIngredientFilter>
+								  <thingDefs>
+									<li>DarkDescent_TeslaCannon</li>
+								  </thingDefs>
+								</fixedIngredientFilter>
+								<appliedOnFixedBodyParts>
+								  <li>Spine</li>
+								</appliedOnFixedBodyParts>
+								<addsHediff>DarkDescent_TeslaCannon</addsHediff>
+							</RecipeDef>
+
+							<RecipeDef ParentName="DarkDescent_SurgeryRemoveTeslaImplantBase">
+								<defName>RemoveDarkDescent_TeslaCannon</defName>
+								<label>remove tesla Cannon</label>
+								<description>Remove the tesla Cannon.</description>
+								<descriptionHyperlinks>
+								  <ThingDef>DarkDescent_TeslaCannon</ThingDef>
+								  <HediffDef>DarkDescent_TeslaCannon</HediffDef>
+								</descriptionHyperlinks>
+								<jobString>Removing tesla Cannon.</jobString>
+								<removesHediff>DarkDescent_TeslaCannon</removesHediff>
+							</RecipeDef>
+							
+							<ThingDef ParentName="BaseBullet">
+								<defName>DarkDescent_Bullet_TeslaCannon</defName>
+								<label>tesla cannon shot</label>
+								<graphicData>
+								  <texPath>Things/Projectile/ChargeLanceShot</texPath>
+								  <graphicClass>Graphic_Single</graphicClass>
+								  <shaderType>TransparentPostLight</shaderType>
+								  <drawSize>1.5</drawSize>
+								</graphicData>
+								<thingClass>Projectile_Explosive</thingClass>
+								<projectile>
+								  <damageDef>EMP</damageDef>
+								  <explosionRadius>2.4</explosionRadius>
+								  <damageAmountBase>30</damageAmountBase>
+								  <speed>120</speed>
+								</projectile>
+							</ThingDef>
+				
+					</value>
+				</li>
+
+
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

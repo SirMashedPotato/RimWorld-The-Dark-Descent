@@ -586,4 +586,20 @@
 		</stages>
 	</HediffDef>
 	
+	<HediffDef>
+		<defName>DarkDescent_FriedNerves</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>fried nerves</label>
+		<description>A completely fried nervous system, caused by constant electrical currents coursing through the body. Provides complete resistance to pain.</description>
+		<defaultLabelColor>(1,1,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<painOffset>-1.0</painOffset>
+			</li>
+		</stages>
+	</HediffDef>
+	
 </Defs>

@@ -153,6 +153,7 @@
         <filter>
           <thingDefs>
 				<li>Corpse_Pig</li>
+				<li>Corpse_WildBoar</li>
 		  </thingDefs>
         </filter>
         <count>1</count>
@@ -188,6 +189,7 @@
       </categories>
 	  <thingDefs>
 			<li>Corpse_Pig</li>
+			<li>Corpse_WildBoar</li>
 			<li>DarkDescent_Vitae</li>
 			<li>DarkDescent_Orgone</li>
 			<li>Steel</li>
@@ -233,6 +235,7 @@
         <filter>
           <thingDefs>
 				<li>Corpse_Pig</li>
+				<li>Corpse_WildBoar</li>
 		  </thingDefs>
         </filter>
         <count>1</count>
@@ -276,6 +279,7 @@
       </categories>
 	  <thingDefs>
 			<li>Corpse_Pig</li>
+			<li>Corpse_WildBoar</li>
 			<li>DarkDescent_Vitae</li>
 			<li>DarkDescent_Orgone</li>
 			<li>Steel</li>
@@ -323,6 +327,7 @@
         <filter>
           <thingDefs>
 				<li>Corpse_Pig</li>
+				<li>Corpse_WildBoar</li>
 		  </thingDefs>
         </filter>
         <count>1</count>
@@ -358,6 +363,7 @@
       </categories>
 	  <thingDefs>
 			<li>Corpse_Pig</li>
+			<li>Corpse_WildBoar</li>
 			<li>DarkDescent_Vitae</li>
 			<li>DarkDescent_Orgone</li>
 			<li>Steel</li>
@@ -433,12 +439,12 @@
   </RecipeDef>
   
   <!-- Goliath -->
-	<!--
+
   <RecipeDef>
   	<researchPrerequisite>DarkDescent_GoliathResearch</researchPrerequisite>
     <defName>DarkDescent_GoliathCreation</defName>
     <label>create servant goliath</label>
-    <description>Create a servant goliath from 2 human corpses and 50 vitae.</description>
+    <description>Create a servant goliath from 2 human corpses, 75 vitae and  50 steel.</description>
     <jobString>Creating servant goliath.</jobString>
     <workAmount>1000</workAmount>
     <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
@@ -459,6 +465,14 @@
         <filter>
           <thingDefs>
 				<li>DarkDescent_Vitae</li>
+		  </thingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+				<li>Steel</li>
 		  </thingDefs>
         </filter>
         <count>50</count>
@@ -483,5 +497,5 @@
       <Intellectual>7</Intellectual>
     </skillRequirements>
   </RecipeDef>
- -->
+
 </Defs>

@@ -36,6 +36,6 @@ namespace DarkDescent
         private static readonly PawnKindDef[] servantDefs =
             {PawnKindDefOf.DarkDescent_Brute, PawnKindDefOf.DarkDescent_Grunt , PawnKindDefOf.DarkDescent_Harvester,
             PawnKindDefOf.DarkDescent_Tesla, PawnKindDefOf.DarkDescent_Wretch, PawnKindDefOf.DarkDescent_Engineer,
-            PawnKindDefOf.DarkDescent_Hound/*, PawnKindDefOf.DarkDescent_Goliath*/};
+            PawnKindDefOf.DarkDescent_Hound, PawnKindDefOf.DarkDescent_Goliath};
     }
 }

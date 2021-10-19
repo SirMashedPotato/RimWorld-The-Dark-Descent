@@ -21,6 +21,7 @@
 						<li>Corpse_DarkDescent_Tesla</li>
 						<li>Corpse_DarkDescent_Harvester</li>
 						<li>Corpse_DarkDescent_Engineer</li>
+						<li>Corpse_DarkDescent_Goliath</li>
 					</value>
 				</match>
 				<nomatch Class="PatchOperationAdd">
@@ -33,6 +34,7 @@
 							<li>Corpse_DarkDescent_Tesla</li>
 							<li>Corpse_DarkDescent_Harvester</li>
 							<li>Corpse_DarkDescent_Engineer</li>
+							<li>Corpse_DarkDescent_Goliath</li>
 						</thingDefs>
 					</value>
 				</nomatch>
@@ -48,6 +50,7 @@
 							<li>Corpse_DarkDescent_Tesla</li>
 							<li>Corpse_DarkDescent_Harvester</li>
 							<li>Corpse_DarkDescent_Engineer</li>
+							<li>Corpse_DarkDescent_Goliath</li>
 					</value>
 				</match>
 				<nomatch Class="PatchOperationAdd">
@@ -60,6 +63,7 @@
 							<li>Corpse_DarkDescent_Tesla</li>
 							<li>Corpse_DarkDescent_Harvester</li>
 							<li>Corpse_DarkDescent_Engineer</li>
+							<li>Corpse_DarkDescent_Goliath</li>
 						</thingDefs>
 					</value>
 				</nomatch>

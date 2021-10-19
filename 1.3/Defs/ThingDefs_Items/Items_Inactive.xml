@@ -137,6 +137,7 @@
 		  <li Class="DarkDescent.CompProperties_UseEffect_ActivateServant">
 			<ServantKind>DarkDescent_Tesla</ServantKind>
 			<drainToActivator>DarkDescent_VitaeExtracted</drainToActivator>
+			<hediffToApply>DarkDescent_FriedNerves</hediffToApply>
 		  </li>
 		</comps>
 	</ThingDef>
@@ -196,7 +197,7 @@
 	</ThingDef>
 	
 	<!-- Goliath -->
-	<!--
+
 	<ThingDef ParentName="DarkDescent_InactiveBase">
 		<defName>DarkDescent_InactiveGoliath</defName>
 		<label>inactive goliath</label>
@@ -223,5 +224,5 @@
 		  </li>
 		</comps>
 	</ThingDef>
-	-->
+
 </Defs>

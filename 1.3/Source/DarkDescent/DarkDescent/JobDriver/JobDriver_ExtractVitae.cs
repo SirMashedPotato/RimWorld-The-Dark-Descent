@@ -50,6 +50,14 @@ namespace DarkDescent
                 hediff = this.Target.health.AddHediff(HediffDefOf.DarkDescent_VitaeExtracted);
                 hediff.Severity = 0.1f;
                 GenSpawn.Spawn(ThingDefOf.DarkDescent_Vitae, this.Target.Position, this.Target.Map, WipeMode.Vanish);
+                /* new thing, check for research, spawn extra vitae */
+                if (ResearchProjectDefOf.DarkDescent_AdvancedExtractorResearch.IsFinished)
+                {
+                    for(int i = 0; i < 5; i++)
+                    {
+                        GenSpawn.Spawn(ThingDefOf.DarkDescent_Vitae, this.Target.Position, this.Target.Map, WipeMode.Vanish);
+                    }
+                }
             }
             else hediff = this.Target.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.DarkDescent_VitaeExtracted);
             for(int i = 1; i != 2; i++) GenSpawn.Spawn(ThingDefOf.DarkDescent_Vitae, this.Target.Position, this.Target.Map, WipeMode.Vanish);

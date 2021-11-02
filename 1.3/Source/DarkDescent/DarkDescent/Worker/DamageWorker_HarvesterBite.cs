@@ -8,7 +8,7 @@ namespace DarkDescent
 		{
 			if (CanInfectPawn(pawn))
 			{
-				DoVitaeStuff(dinfo.Instigator as Pawn, pawn, (dinfo.Amount / 300));
+				DoVitaeStuff(dinfo.Instigator as Pawn, pawn, (dinfo.Amount / 150));
 			}
 			return pawn.health.hediffSet.GetRandomNotMissingPart(dinfo.Def, dinfo.Height, BodyPartDepth.Outside, null);
 		}

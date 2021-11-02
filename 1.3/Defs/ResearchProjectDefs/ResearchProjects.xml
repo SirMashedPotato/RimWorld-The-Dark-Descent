@@ -26,6 +26,20 @@
 	</ResearchProjectDef>
 	
 	<ResearchProjectDef>
+		<defName>DarkDescent_ImprovedVitaeResearch</defName>
+		<label>improved vitae extraction</label>
+		<description>From studying manuscripts recovered from Brennenburg Castle, you have improved upon the methods used to extract vitae from a human.\n\nOnce researched, vitae extraction will yield an additional vial of vitae, without increasing drain severity.</description>
+		<baseCost>1500</baseCost>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_VitaeResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
 		<defName>DarkDescent_OrgoneResearch</defName>
 		<label>orgone extraction</label>
 		<description>From studying texts written by one Oswald Mandus, you have pieced together the methods used to extract orgone from a human.</description>
@@ -36,6 +50,20 @@
 		<tab>DarkDescent_Tab</tab>
 		<prerequisites>
 			<li>DarkDescent_VitaeResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_ImprovedOrgoneResearch</defName>
+		<label>improved orgone extraction</label>
+		<description>From studying texts written by one Oswald Mandus, you have improved upon the methods used to extract orgone from a human.\n\nOnce researched, vitae extraction will yield an additional vial of orgone, without increasing drain severity.</description>
+		<baseCost>1500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_OrgoneResearch</li>
 		</prerequisites>
 	</ResearchProjectDef>
 	
@@ -266,7 +294,6 @@
 		<researchViewY>4.00</researchViewY>
 		<tab>DarkDescent_Tab</tab>
 		<prerequisites>
-			<li>DarkDescent_OrgoneResearch</li>
 			<li>DarkDescent_DecoctionRegenerationResearch</li>
 		</prerequisites>
 	</ResearchProjectDef>
@@ -301,6 +328,20 @@
 		</prerequisites>
 	</ResearchProjectDef>
 	
+	<ResearchProjectDef>
+		<defName>DarkDescent_AdvancedExtractorResearch</defName>
+		<label>improved vitae extractor</label>
+		<description>From studying ancient texts of unknown origin, you have discovered schematics detailing how to improve the design of vitae extractors.\n\nOnce researched, vitae extractors will yield five additional vials of vitae.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<researchViewX>7.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_ExtractorResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
 	<ResearchProjectDef>
 		<defName>DarkDescent_GeneratorResearch</defName>
 		<label>vitae powered generator</label>

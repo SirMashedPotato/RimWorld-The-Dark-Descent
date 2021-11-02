@@ -136,10 +136,12 @@
 		<isBad>false</isBad>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<comps>
+
 		</comps>
 		<stages>
 		  <li>
-			<minSeverity>0.0</minSeverity>
+			<label>critical</label>
+			<minSeverity>0.01</minSeverity>
 			<capMods>
 			  <li>
 				<capacity>Manipulation</capacity>
@@ -152,6 +154,7 @@
 			</capMods>
 		  </li>
 		  <li>
+			<label>0%</label>
 			<minSeverity>0.09</minSeverity>
 			<capMods>
 			  <li>
@@ -165,6 +168,7 @@
 			</capMods>
 		  </li>
 		  <li>
+			<label>10%</label>
 			<minSeverity>0.19</minSeverity>
 			<capMods>
 			  <li>
@@ -178,6 +182,7 @@
 			</capMods>
 		  </li>
 		  <li>
+			<label>20%</label>
 			<minSeverity>0.29</minSeverity>
 			<capMods>
 			  <li>
@@ -191,6 +196,7 @@
 			</capMods>
 		  </li>
 		  <li>
+			<label>30%</label>
 			<minSeverity>0.39</minSeverity>
 			<capMods>
 			  <li>
@@ -204,6 +210,7 @@
 			</capMods>
 		  </li>
 		  <li>
+			<label>40%</label>
 			<minSeverity>0.49</minSeverity>
 			<capMods>
 			  <li>
@@ -217,6 +224,7 @@
 			</capMods>
 		  </li>
 		  <li>
+		  <label>50%</label>
 			<minSeverity>0.59</minSeverity>
 			<capMods>
 			  <li>
@@ -230,6 +238,7 @@
 			</capMods>
 		  </li>
 		  <li>
+			<label>60%</label>
 			<minSeverity>0.69</minSeverity>
 			<capMods>
 			  <li>
@@ -243,6 +252,7 @@
 			</capMods>
 		  </li>
 		  <li>
+			<label>70%</label>
 			<minSeverity>0.79</minSeverity>
 			<capMods>
 			  <li>
@@ -256,6 +266,7 @@
 			</capMods>
 		  </li>
 		  <li>
+			<label>80%</label>
 			<minSeverity>0.89</minSeverity>
 			<capMods>
 			  <li>
@@ -269,6 +280,7 @@
 			</capMods>
 		  </li>
 		  <li>
+			<label>90%</label>
 			<minSeverity>0.99</minSeverity>
 			<capMods>
 			  <li>
@@ -282,6 +294,27 @@
 			</capMods>
 			<statOffsets>
 				<MeleeDodgeChance>0.15</MeleeDodgeChance>
+				<ImmunityGainSpeed>0.15</ImmunityGainSpeed>
+				<InjuryHealingFactor>0.15</InjuryHealingFactor>
+			</statOffsets>
+		  </li>
+		  <li>
+			<label>100%</label>
+			<minSeverity>1</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Manipulation</capacity>
+				<offset>0.35</offset>
+			  </li>
+			  <li>
+				<capacity>Moving</capacity>
+				<offset>0.35</offset>
+			  </li>
+			</capMods>
+			<statOffsets>
+				<MeleeDodgeChance>0.25</MeleeDodgeChance>
+				<ImmunityGainSpeed>0.25</ImmunityGainSpeed>
+				<InjuryHealingFactor>0.25</InjuryHealingFactor>
 			</statOffsets>
 		  </li>
 		</stages>
@@ -448,6 +481,10 @@
 					<offset>0.1</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<ImmunityGainSpeed>0.1</ImmunityGainSpeed>
+					<InjuryHealingFactor>0.1</InjuryHealingFactor>
+				</statOffsets>
 			</li>
 			<!-- -->
 			<li>
@@ -483,6 +520,10 @@
 					<offset>0.15</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<ImmunityGainSpeed>0.15</ImmunityGainSpeed>
+					<InjuryHealingFactor>0.15</InjuryHealingFactor>
+				</statOffsets>
 			</li>
 			<!-- -->
 			<li>
@@ -518,6 +559,10 @@
 					<offset>0.15</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<ImmunityGainSpeed>0.25</ImmunityGainSpeed>
+					<InjuryHealingFactor>0.25</InjuryHealingFactor>
+				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>
@@ -568,6 +613,10 @@
 					<offset>0.15</offset>
 				  </li>
 				</capMods>
+				<statOffsets>
+					<ImmunityGainSpeed>0.25</ImmunityGainSpeed>
+					<InjuryHealingFactor>0.25</InjuryHealingFactor>
+				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>

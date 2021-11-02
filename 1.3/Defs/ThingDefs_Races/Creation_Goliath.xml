@@ -11,8 +11,8 @@
 		<statBases>
 		  <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
 		  <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
-		  <MoveSpeed>2.0</MoveSpeed>
-		  <InjuryHealingFactor>1.5</InjuryHealingFactor>
+		  <MoveSpeed>3.0</MoveSpeed>
+		  <InjuryHealingFactor>2.5</InjuryHealingFactor>
 		  <MarketValue>700</MarketValue>
 		</statBases>
 		<tools>

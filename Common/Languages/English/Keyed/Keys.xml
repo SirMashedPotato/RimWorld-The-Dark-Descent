@@ -6,6 +6,9 @@
     <DarkDescent_VitaeExtracted>Extracted vitae</DarkDescent_VitaeExtracted>
 	<DarkDescent_OrgoneExtracted>Extracted orgone</DarkDescent_OrgoneExtracted>
 	
+	<DarkDescent_DetonatePiggy>Detonate tesla supercharger</DarkDescent_DetonatePiggy>
+	<DarkDescent_DetonatePiggyDescription>Overheats the tesla coils causing a catastrophic meltdown. The coils release large pulses of electrical energy, and then explode, rather violently\n\nThe servant 'tesla' likely won't survive this</DarkDescent_DetonatePiggyDescription>
+	
 	<!-- Settings -->
 	
 	<DarkDescent_SettingRegenTicks>Tickspeed for Regenerative Decoction healing</DarkDescent_SettingRegenTicks>

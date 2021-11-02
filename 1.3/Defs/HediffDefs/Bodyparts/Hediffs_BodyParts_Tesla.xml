@@ -378,5 +378,78 @@
     <jobString>Removing tesla coolant rod.</jobString>
     <removesHediff>DarkDescent_TeslaCoolant</removesHediff>
   </RecipeDef>
+  
+  <!-- DarkDescent_TeslaBigBoom -->
+  <!--
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>DarkDescent_TeslaBigBoom</defName>
+    <label>tesla supercharger</label>
+    <labelNoun>a tesla supercharger</labelNoun>
+    <description>An installed tesla supercharger implant.</description>
+    <descriptionHyperlinks><ThingDef>DarkDescent_TeslaBigBoom</ThingDef></descriptionHyperlinks>
+	<disablesNeeds>
+		<li>Food</li>
+	</disablesNeeds>
+    <stages>
+    </stages>
+    <spawnThingOnRemoved>DarkDescent_TeslaBigBoom</spawnThingOnRemoved>
+	<addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.0</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
 
+  <ThingDef ParentName="DarkDescent_BodyPartTeslaBase">
+    <defName>DarkDescent_TeslaBigBoom</defName>
+    <label>tesla supercharger</label>
+    <description>A modified tesla coil designed to be installed onto the spine. Allows the creator to remotely super-charge the servants tesla coils, overheating them and causing a catastrophic meltdown. The coils release large pulses of electrical energy, and then explode, rather violently\n\nThe servant 'tesla' likely won't survive this.</description>
+    <descriptionHyperlinks><RecipeDef>InstallDarkDescent_TeslaBigBoom</RecipeDef></descriptionHyperlinks>
+	<costList Inherit="false">
+		<Steel>80</Steel>
+		<ComponentIndustrial>6</ComponentIndustrial>
+	</costList>
+  </ThingDef>
+
+  <RecipeDef ParentName="DarkDescent_SurgeryInstallTeslaImplantBase">
+    <defName>InstallDarkDescent_TeslaBigBoom</defName>
+    <label>install tesla supercharger</label>
+    <description>Install a tesla supercharger.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_TeslaBigBoom</ThingDef>
+      <HediffDef>DarkDescent_TeslaBigBoom</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing tesla supercharger.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DarkDescent_TeslaBigBoom</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DarkDescent_TeslaBigBoom</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>DarkDescent_TeslaBigBoom</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="DarkDescent_SurgeryRemoveTeslaImplantBase">
+    <defName>RemoveDarkDescent_TeslaBigBoom</defName>
+    <label>remove tesla supercharger</label>
+    <description>Remove the tesla supercharger.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_TeslaBigBoom</ThingDef>
+      <HediffDef>DarkDescent_TeslaBigBoom</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing tesla supercharger.</jobString>
+    <removesHediff>DarkDescent_TeslaBigBoom</removesHediff>
+  </RecipeDef>
+	-->
 </Defs>

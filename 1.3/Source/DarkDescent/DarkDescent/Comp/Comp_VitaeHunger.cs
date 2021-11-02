@@ -68,7 +68,7 @@ namespace DarkDescent
 				return;
 			}
 			Log.Message(pawn + " has no hediff " + Props.hediff + ", adding back.");
-			pawn.health.AddHediff(Props.hediff).Severity = 0.1f;
+			pawn.health.AddHediff(Props.hediff).Severity = Props.minSeverity;
 		}
 
 		public bool HungerCheck(Pawn pawn)
@@ -80,7 +80,7 @@ namespace DarkDescent
 				return hediff.Severity <= GetThreshold(pawn, Props.minSeverity);
 			}
 			Log.Message(pawn + " has no hediff " + Props.hediff + ", adding back.");
-			pawn.health.AddHediff(Props.hediff).Severity = 0.1f;
+			pawn.health.AddHediff(Props.hediff).Severity = Props.minSeverity;
 			return false;
 		}
 
@@ -92,7 +92,7 @@ namespace DarkDescent
 				return hediff.Severity >= Props.resetSeverity;
 			}
 			Log.Message(pawn + " has no hediff " + Props.hediff + ", adding back.");
-			pawn.health.AddHediff(Props.hediff).Severity = 0.1f;
+			pawn.health.AddHediff(Props.hediff).Severity = Props.minSeverity;
 			return true;
 		}
 

@@ -62,6 +62,7 @@
     <Compile Include="CompUse\CompUseEffect_ActivateServant.cs" />
     <Compile Include="Comp\Comp_RavenousHunger.cs" />
     <Compile Include="Comp\CompProperties_TeslaDischarge.cs" />
+    <Compile Include="DefOf\ResearchProjectDefOf.cs" />
     <Compile Include="HediffComp\HediffCompProperties_HarversterDecoction.cs" />
     <Compile Include="HediffComp\HediffCompProperties_WeyersTonic.cs" />
     <Compile Include="HediffComp\HediffComp_HarversterDecoction.cs" />

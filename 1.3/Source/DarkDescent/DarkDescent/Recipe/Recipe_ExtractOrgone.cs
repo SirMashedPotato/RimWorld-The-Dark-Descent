@@ -17,6 +17,11 @@ namespace DarkDescent
 					pawn
 				});
 				GenSpawn.Spawn(ThingDefOf.DarkDescent_Orgone, billDoer.Position, billDoer.Map, WipeMode.Vanish);
+				/* new thing, check for research, spawn extra vitae */
+				if (ResearchProjectDefOf.DarkDescent_ImprovedOrgoneResearch.IsFinished)
+				{
+					GenSpawn.Spawn(ThingDefOf.DarkDescent_Orgone, billDoer.Position, billDoer.Map, WipeMode.Vanish);
+				}
 				if (pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.DarkDescent_OrgoneExtracted) != null)
 				{
 					pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.DarkDescent_OrgoneExtracted).Severity += 0.3f;

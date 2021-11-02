@@ -24,11 +24,12 @@
 		  <Flammability>0.2</Flammability>
 		</statBases>
 		<thingCategories>
-		  <li>Items</li>
+		  <li>Artifacts</li>
 		</thingCategories>
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<techLevel>Medieval</techLevel>
 		<tradeTags>
+		  <li>Artifact</li>
 		  <li>ExoticMisc</li>
 		</tradeTags>
 		<thingSetMakerTags>

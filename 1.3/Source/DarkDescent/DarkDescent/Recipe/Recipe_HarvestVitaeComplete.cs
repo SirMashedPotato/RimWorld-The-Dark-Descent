@@ -16,6 +16,10 @@ namespace DarkDescent
 					GenSpawn.Spawn(ThingDefOf.DarkDescent_Vitae, billDoer.Position, billDoer.Map, WipeMode.Vanish);
 					vitaeHediff.Severity -= 0.1f;
 				}
+                if (pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.DarkDescent_StoredVitae) == null)
+                {
+					pawn.health.AddHediff(HediffDefOf.DarkDescent_StoredVitae).Severity = 0.001f;
+				}
 			}
 			HealthUtility.GiveInjuriesOperationFailureMinor(pawn, pawn.def.race.body.AllParts.RandomElement());
 			if (pawn.Dead)

@@ -16,6 +16,13 @@
   </JobDef>
   
   <JobDef>
+    <defName>DarkDescent_ExtractOrgone</defName>
+    <driverClass>DarkDescent.JobDriver_ExtractOrgone</driverClass>
+    <reportString>extracting orgone from TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  
+  <JobDef>
     <defName>DarkDescent_VitaeResurrect</defName>
     <driverClass>DarkDescent.JobDriver_VitaeResurrect</driverClass>
     <reportString>resurrecting TargetA.</reportString>

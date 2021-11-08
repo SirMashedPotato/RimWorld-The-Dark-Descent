@@ -14,5 +14,6 @@ namespace DarkDescent
 		public static ResearchProjectDef DarkDescent_ImprovedVitaeResearch;
 		public static ResearchProjectDef DarkDescent_ImprovedOrgoneResearch;
 		public static ResearchProjectDef DarkDescent_AdvancedExtractorResearch;
+		public static ResearchProjectDef DarkDescent_AdvancedOrgoneExtractorResearch;
 	}
 }

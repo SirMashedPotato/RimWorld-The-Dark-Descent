@@ -13,6 +13,7 @@ namespace DarkDescent
 		}
 
 		public static JobDef DarkDescent_ExtractVitae;
+		public static JobDef DarkDescent_ExtractOrgone;
 		public static JobDef DarkDescent_VitaeResurrect;
 		public static JobDef DarkDescent_ServantRepair;
 		public static JobDef DarkDescent_ServantDeconstruct;

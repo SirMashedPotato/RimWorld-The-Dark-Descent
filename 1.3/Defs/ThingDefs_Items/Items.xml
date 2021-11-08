@@ -170,5 +170,38 @@
 		  </li>
 		</comps>
 	</ThingDef>
+	
+	<!-- orgone extractor -->
+	
+	<ThingDef ParentName="MechSerumBase">
+		<defName>DarkDescent_OrgoneExtractor</defName>
+		<label>orgone extractor</label>
+		<description>A single-use device used to completely drain a downed target of orgone, killing them in the process. Considerably more efficient than extracting orgone manually, though the device was not designed with any safeguards to prevent death.</description>
+		<graphicData>
+		  <texPath>Things/Item/Special/DarkDescent_OrgoneExtractor</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<statBases>
+		  <MarketValue>100</MarketValue>
+		</statBases>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<tradeability>Sellable</tradeability>
+		<comps>
+		  <li Class="CompProperties_Usable">
+			<useJob>UseItem</useJob>
+			<useLabel>Use orgone extractor</useLabel>
+			<useDuration>0</useDuration>
+		  </li>
+		  <li Class="CompProperties_Targetable">
+			<compClass>DarkDescent.CompTargetable_SinglePawnHumanlike</compClass>
+		  </li>
+		  <li>
+			<compClass>DarkDescent.CompTargetEffect_ExtractOrgone</compClass>
+		  </li>
+		</comps>
+	</ThingDef>
 
 </Defs>

@@ -55,6 +55,7 @@
 		<li>DarkDescent_GoliathCreation</li>
 		<li>DarkDescent_InfusionResurrectionCreation</li>
 		<li>DarkDescent_ExtractorCreation</li>
+		<li>DarkDescent_OrgoneExtractorCreation</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>

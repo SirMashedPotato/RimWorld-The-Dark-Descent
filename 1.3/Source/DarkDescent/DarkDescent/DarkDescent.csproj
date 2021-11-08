@@ -52,6 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompTarget\CompTargetEffect_ExtractOrgone.cs" />
     <Compile Include="CompTarget\CompTargetEffect_VitaeResurrect.cs" />
     <Compile Include="CompTarget\CompTargetable_SinglePawnHumanlike.cs" />
     <Compile Include="CompTarget\CompTargetEffect_ExtractVitae.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="HediffComp\HediffCompProperties_HealWounds.cs" />
     <Compile Include="HediffComp\HediffComp_HealWounds.cs" />
     <Compile Include="IngestionOutcomeDoer\IngestionOutcomeDoer_DecreaseAge.cs" />
+    <Compile Include="JobDriver\JobDriver_ExtractOrgone.cs" />
     <Compile Include="Settings\ModSettings_Utility.cs" />
     <Compile Include="Settings\DarkDescent_ModSettings.cs" />
     <Compile Include="Settings\DarkDescent_Mod.cs" />

@@ -31,7 +31,7 @@
 		<description>From studying manuscripts recovered from Brennenburg Castle, you have improved upon the methods used to extract vitae from a human.\n\nOnce researched, vitae extraction will yield an additional vial of vitae, without increasing drain severity.</description>
 		<baseCost>1500</baseCost>
 		<techLevel>Medieval</techLevel>
-		<researchViewX>6.00</researchViewX>
+		<researchViewX>1.00</researchViewX>
 		<researchViewY>1.00</researchViewY>
 		<tab>DarkDescent_Tab</tab>
 		<prerequisites>
@@ -59,7 +59,7 @@
 		<description>From studying texts written by one Oswald Mandus, you have improved upon the methods used to extract orgone from a human.\n\nOnce researched, vitae extraction will yield an additional vial of orgone, without increasing drain severity.</description>
 		<baseCost>1500</baseCost>
 		<techLevel>Industrial</techLevel>
-		<researchViewX>6.00</researchViewX>
+		<researchViewX>1.00</researchViewX>
 		<researchViewY>2.00</researchViewY>
 		<tab>DarkDescent_Tab</tab>
 		<prerequisites>
@@ -75,7 +75,7 @@
 		<description>From studying ancient texts of unknown origin, you have discovered a mixture capable of turning living humans into servant 'harvester'.\n\nHarvesters can not perform complicated jobs, instead they are used to extract vitae from their victims. Stored vitae will empower the harvester, or can be extracted through a medical procedure. Harvesters who remain drained of vitae for too long will turn manhunter.</description>
 		<baseCost>2000</baseCost>
 		<techLevel>Medieval</techLevel>
-		<researchViewX>1.00</researchViewX>
+		<researchViewX>2.00</researchViewX>
 		<researchViewY>1.00</researchViewY>
 		<tab>DarkDescent_Tab</tab>
 		<prerequisites>
@@ -320,7 +320,7 @@
 		<description>From studying ancient texts of unknown origin, you have discovered schematics detailing a device capable of completely draining a living being of vitae.</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Industrial</techLevel>
-		<researchViewX>2.00</researchViewX>
+		<researchViewX>5.00</researchViewX>
 		<researchViewY>1.00</researchViewY>
 		<tab>DarkDescent_Tab</tab>
 		<prerequisites>
@@ -334,11 +334,40 @@
 		<description>From studying ancient texts of unknown origin, you have discovered schematics detailing how to improve the design of vitae extractors.\n\nOnce researched, vitae extractors will yield five additional vials of vitae.</description>
 		<baseCost>2000</baseCost>
 		<techLevel>Industrial</techLevel>
-		<researchViewX>7.00</researchViewX>
+		<researchViewX>6.00</researchViewX>
 		<researchViewY>1.00</researchViewY>
 		<tab>DarkDescent_Tab</tab>
 		<prerequisites>
 			<li>DarkDescent_ExtractorResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_OrgoneExtractorResearch</defName>
+		<label>orgone extractor</label>
+		<description>From studying ancient texts of unknown origin, you have discovered schematics detailing a device capable of completely draining a living being of orgone.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_OrgoneResearch</li>
+			<li>DarkDescent_ExtractorResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_AdvancedOrgoneExtractorResearch</defName>
+		<label>improved orgone extractor</label>
+		<description>From studying ancient texts of unknown origin, you have discovered schematics detailing how to improve the design of orgone extractors.\n\nOnce researched, orgone extractors will yield five additional vials of orgone.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>2.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_OrgoneExtractorResearch</li>
 		</prerequisites>
 	</ResearchProjectDef>
 

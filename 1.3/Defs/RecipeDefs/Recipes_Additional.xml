@@ -138,7 +138,7 @@
 		  </thingDefs>
     </fixedIngredientFilter>
 	<products>
-      <DarkDescent_Extractor>1</DarkDescent_Extractor>
+      <DarkDescent_OrgoneExtractor>1</DarkDescent_OrgoneExtractor>
     </products>
 	<skillRequirements>
       <Intellectual>10</Intellectual>

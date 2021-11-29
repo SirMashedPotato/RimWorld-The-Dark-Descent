@@ -9,6 +9,7 @@
     <reproductive>false</reproductive>
     <milkable>true</milkable>
     <shearable>true</shearable>
+	<caravanRideable>true</caravanRideable>
   </LifeStageDef>
   
 </Defs>

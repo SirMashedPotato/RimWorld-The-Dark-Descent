@@ -55,6 +55,9 @@
 		  <li Class="DarkDescent.CompProperties_UseEffect_ActivateServant">
 			<ServantKind>DarkDescent_Grunt</ServantKind>
 			<drainToActivator>DarkDescent_VitaeExtracted</drainToActivator>
+			<conceptDefs>
+				<li>DarkDescent_ServantsAndZones</li>
+			</conceptDefs>
 		  </li>
 		</comps>
 	</ThingDef>
@@ -83,6 +86,9 @@
 			<ServantKind>DarkDescent_Brute</ServantKind>
 			<drainToActivator>DarkDescent_VitaeExtracted</drainToActivator>
 			<drainToActivatorSeverity>0.2</drainToActivatorSeverity>
+			<conceptDefs>
+				<li>DarkDescent_ServantsAndZones</li>
+			</conceptDefs>
 		  </li>
 		</comps>
 	</ThingDef>
@@ -138,6 +144,9 @@
 			<ServantKind>DarkDescent_Tesla</ServantKind>
 			<drainToActivator>DarkDescent_VitaeExtracted</drainToActivator>
 			<hediffToApply>DarkDescent_FriedNerves</hediffToApply>
+			<conceptDefs>
+				<li>DarkDescent_ServantsAndZones</li>
+			</conceptDefs>
 		  </li>
 		</comps>
 	</ThingDef>
@@ -192,6 +201,9 @@
 		  <li Class="DarkDescent.CompProperties_UseEffect_ActivateServant">
 			<ServantKind>DarkDescent_Hound</ServantKind>
 			<drainToActivator>DarkDescent_VitaeExtracted</drainToActivator>
+			<conceptDefs>
+				<li>DarkDescent_ServantsAndZones</li>
+			</conceptDefs>
 		  </li>
 		</comps>
 	</ThingDef>
@@ -221,6 +233,9 @@
 			<drainToActivator>DarkDescent_VitaeExtracted</drainToActivator>
 			<drainToActivatorSeverity>0.2</drainToActivatorSeverity>
 			<hediffToApply>DarkDescent_VitaeSaturated</hediffToApply>
+			<conceptDefs>
+				<li>DarkDescent_ServantsAndZones</li>
+			</conceptDefs>
 		  </li>
 		</comps>
 	</ThingDef>

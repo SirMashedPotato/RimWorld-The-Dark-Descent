@@ -54,6 +54,10 @@ namespace DarkDescent
 					}
 					servant.health.AddHediff(HediffDefOf.DarkDescent_ServantQuality).Severity = q + 0.1f;
 				}
+				foreach (ConceptDef cd in Props.conceptDefs)
+				{
+					LessonAutoActivator.TeachOpportunity(cd, OpportunityType.Important);
+				}
 			}
 		}
 	}

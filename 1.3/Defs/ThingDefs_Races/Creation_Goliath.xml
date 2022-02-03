@@ -73,7 +73,7 @@
 			  <thinkTreeMain>DarkDescent_Servant</thinkTreeMain>
 			  <maxPreyBodySize>2</maxPreyBodySize>
 			  <baseHungerRate>1</baseHungerRate>
-			  <thinkTreeConstant>DarkDescent_ServantConstant</thinkTreeConstant>
+			  <thinkTreeConstant>DarkDescent_ServantConstant_Agressive</thinkTreeConstant>
 			  <body>Human</body>
 			  <baseBodySize>3</baseBodySize>
 			  <baseHealthScale>6.9</baseHealthScale>

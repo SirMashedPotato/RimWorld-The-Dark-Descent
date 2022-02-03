@@ -83,7 +83,7 @@
 		<race>
 		  <body>QuadrupedAnimalWithPawsAndTail</body>
 		  <thinkTreeMain>DarkDescent_Servant</thinkTreeMain>
-		  <thinkTreeConstant>DarkDescent_ServantConstant</thinkTreeConstant>
+		  <thinkTreeConstant>DarkDescent_ServantConstant_Agressive</thinkTreeConstant>
 		  <baseBodySize>0.85</baseBodySize>
 		  <baseHealthScale>0.99</baseHealthScale>
 		  <leatherDef>Leather_Dog</leatherDef>

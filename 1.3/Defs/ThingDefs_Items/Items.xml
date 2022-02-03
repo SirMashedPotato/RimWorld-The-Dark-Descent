@@ -45,8 +45,8 @@
 	
 	<ThingDef ParentName="ResourceBase">
 		<defName>DarkDescent_Vitae</defName>
-		<label>vitae</label>
-		<description>Vitae extracted from a human. The extraction process is somewhat painful, a necessity for maximum yield. Rather useless by itself, though with the right tools the possibilities are endless.</description>
+		<label>Brennenburg vitae</label>
+		<description>Vitae extracted from a human. The extraction process is somewhat painful, a necessity for maximum yield. Rather useless by itself, though with the right tools the possibilities are endless.\n\nAlthough other species may be tortured for vitae, the quanitity produced is not worth the effort.</description>
 		<graphicData>
 		  <texPath>Things/Item/Resource/DarkDescent_Vitae</texPath>
 		  <graphicClass>Graphic_StackCount</graphicClass>

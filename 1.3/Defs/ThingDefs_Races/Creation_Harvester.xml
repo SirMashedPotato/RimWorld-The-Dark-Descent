@@ -76,6 +76,7 @@
 		</comps>
 		<race>
 		  <body>Human</body>
+		  <thinkTreeConstant>DarkDescent_ServantConstant_Agressive</thinkTreeConstant>
 		  <baseBodySize>1.0</baseBodySize>
 		  <baseHealthScale>2.5</baseHealthScale>
 		  <baseHungerRate>1.0</baseHungerRate>

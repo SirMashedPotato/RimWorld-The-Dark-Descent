@@ -647,7 +647,7 @@
 		<isBad>false</isBad>
 		<stages>
 			<li>
-				<painOffset>-1.0</painOffset>
+				<painOffset>-999</painOffset>
 			</li>
 		</stages>
 	</HediffDef>

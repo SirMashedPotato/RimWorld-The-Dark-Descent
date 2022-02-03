@@ -10,6 +10,9 @@
 		<researchViewX>0.00</researchViewX>
 		<researchViewY>0.00</researchViewY>
 		<tab>DarkDescent_Tab</tab>
+		<requiredResearchFacilities>
+		  <li>DarkDescent_OrbPedestal</li>
+		</requiredResearchFacilities>
 	</ResearchProjectDef>
 	
 	<!-- extracts -->

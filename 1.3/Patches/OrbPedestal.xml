@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="SimpleResearchBench"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="SimpleResearchBench"]</xpath>
+			<value>
+				<comps>
+				</comps>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="SimpleResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="SimpleResearchBench"]/comps</xpath>
+			<value>
+				<li Class="CompProperties_AffectedByFacilities">
+					<linkableFacilities>
+
+					</linkableFacilities>
+				</li>
+			</value>
+		</nomatch>
+	</Operation>
+
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="SimpleResearchBench" or defName="HiTechResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+		<value>
+			<li>DarkDescent_OrbPedestal</li>
+		</value>
+	</Operation>
+	
+
+</Patch>

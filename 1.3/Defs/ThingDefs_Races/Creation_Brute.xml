@@ -63,7 +63,7 @@
 		</tools>
 		<race>
 		  <thinkTreeMain>DarkDescent_Servant</thinkTreeMain>
-		  <thinkTreeConstant>DarkDescent_ServantConstant</thinkTreeConstant>
+		  <thinkTreeConstant>DarkDescent_ServantConstant_Agressive</thinkTreeConstant>
 		  <body>Human</body>
 		  <baseBodySize>1.1</baseBodySize>
 		  <baseHealthScale>2.8</baseHealthScale>

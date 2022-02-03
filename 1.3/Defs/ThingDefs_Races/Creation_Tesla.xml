@@ -84,7 +84,7 @@
 		<race>
 	      <needsRest>false</needsRest>
 		  <thinkTreeMain>DarkDescent_Servant</thinkTreeMain>
-		  <thinkTreeConstant>DarkDescent_ServantConstant</thinkTreeConstant>
+		  <thinkTreeConstant>DarkDescent_ServantConstant_Agressive</thinkTreeConstant>
 		  <deathActionWorkerClass>DarkDescent.DeathActionWorker_Tesla</deathActionWorkerClass>
 		  <body>Human</body>
 		  <baseBodySize>1.0</baseBodySize>

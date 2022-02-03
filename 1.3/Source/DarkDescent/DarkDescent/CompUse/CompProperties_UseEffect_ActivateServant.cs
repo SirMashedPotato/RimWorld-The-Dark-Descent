@@ -1,6 +1,7 @@
 ﻿using System;
 using Verse;
 using RimWorld;
+using System.Collections.Generic;
 
 namespace DarkDescent
 {
@@ -17,5 +18,7 @@ namespace DarkDescent
 		public float drainToActivatorSeverity = 0.10f;
 		public bool bond = true;
 		public bool useQuality = true;
+
+		public List<ConceptDef> conceptDefs;
 	}
 }

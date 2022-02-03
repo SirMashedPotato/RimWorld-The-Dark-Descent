@@ -329,5 +329,29 @@
       </subNodes>
     </thinkRoot>
   </ThinkTreeDef>
+  
+  <ThinkTreeDef>
+    <defName>DarkDescent_ServantConstant_Agressive</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
+          <subNodes>
+            <!-- Join auto joinable caravan -->
+            <li Class="ThinkNode_Subtree">
+              <treeDef>JoinAutoJoinableCaravan</treeDef>
+            </li>
+			
+			<!-- Servants will literally chase the enemies to the edges of the map -->
+            <li Class="DarkDescent.JobGiver_AIGotoNearestHostile_ButSmartly" />
+            
+            <!-- Lord directives -->
+            <li Class="ThinkNode_Subtree">
+              <treeDef>LordDutyConstant</treeDef>
+            </li>
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
 
 </Defs>

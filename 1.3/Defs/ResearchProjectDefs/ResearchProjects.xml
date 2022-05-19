@@ -391,4 +391,53 @@
 	
 	<!-- orb studies -->
 	
+	<ResearchProjectDef>
+		<defName>DarkDescent_OrbStudies_Vol1</defName>
+		<label>orb studies Vol. I</label>
+		<description>Peering into the orb, you see countless opportunities before you. Those that seek them may uncover great boons, or terrible maluses. The first step is always the most dangerous.\n\nAllows pawns to interact with orbs.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<requiredResearchFacilities>
+		  <li>DarkDescent_OrbPedestal</li>
+		</requiredResearchFacilities>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>DarkDescent_OrbStudies_Vol2</defName>
+		<label>orb studies Vol. II</label>
+		<description>Intense study of the orbs has lead to a greater udnerstanding of them, decreasing the chance an orb shatters by 5%.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_OrbStudies_Vol1</li>
+		</prerequisites>
+		<requiredResearchFacilities>
+		  <li>DarkDescent_OrbPedestal</li>
+		</requiredResearchFacilities>
+	</ResearchProjectDef>
+	
+	<!-- Royalty patch, extends from later in the path -->
+	<ResearchProjectDef>
+		<defName>DarkDescent_OrbStudies_Vol[X]</defName>
+		<label>orb studies Vol. [x]</label>
+		<description>Intense study of the orbs has lead to a greater udnerstanding of them, pawns can now attempt to gain a psylink from orbs.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<tab>DarkDescent_Tab</tab>
+		<prerequisites>
+			<li>DarkDescent_OrbStudies_Vol[X]</li>
+		</prerequisites>
+		<requiredResearchFacilities>
+		  <li>DarkDescent_OrbPedestal</li>
+		</requiredResearchFacilities>
+	</ResearchProjectDef>
+	
 </Defs>

@@ -11,7 +11,7 @@
 		<defName>DarkDescent_OrbSeeker_Increased</defName>
 		<issue>DarkDescent_OrbSeeker</issue>
 		<label>increased</label>
-		<description>We have increased knowledge of the orbs.\n\nIncreases the chance of a successful interaction with an orb by 10%</description>
+		<description>We have increased knowledge of the orbs.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt;\n - Decreases the chance of an orb shattering by 10%.</description>
 		<impact>Low</impact>
 		<displayOrderInIssue>0</displayOrderInIssue>
 		<displayOrderInImpact>-100</displayOrderInImpact>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ToolCapacityDef>
+    <defName>DarkDescent_HarvesterBite</defName>
+    <label>Bite</label>
+  </ToolCapacityDef>
+  
+  <ToolCapacityDef>
+    <defName>DarkDescent_HarvesterScratch</defName>
+    <label>Scratch</label>
+  </ToolCapacityDef>
+
+</Defs>

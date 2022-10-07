@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<MVCF.ModDef>
+		<defName>MVCF_DarkDescent</defName>
+		<label>RimWorld - The Dark Descent</label>
+		<description>Adds in a new hediff for the tesla</description>
+		<ActivateFeatures>
+			<li>RangedAnimals</li>
+			<li>HediffVerbs</li>
+			<li>IntegratedToggle</li>
+		</ActivateFeatures>
+	</MVCF.ModDef>
+</Defs>

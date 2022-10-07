@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- DarkDescent_Dampener -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>DarkDescent_Dampener</defName>
+    <label>servant dampener</label>
+    <labelNoun>a servant dampener</labelNoun>
+    <description>An installed servant dampener implant.</description>
+    <descriptionHyperlinks><ThingDef>DarkDescent_Dampener</ThingDef></descriptionHyperlinks>
+    <stages>
+      <li>
+        <capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.10</offset>
+			  </li>
+		</capMods>
+      </li>
+    </stages>
+    <spawnThingOnRemoved>DarkDescent_Dampener</spawnThingOnRemoved>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>DarkDescent_Dampener</defName>
+    <label>servant dampener</label>
+    <description>A brain implant which dampens a servants free will. Installing this in an orb servant will increase the hunger threshold required for them to initiate a hunger frenzy.</description>
+    <descriptionHyperlinks><RecipeDef>InstallDarkDescent_Dampener</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Steel>20</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+	<recipeMaker>
+        <researchPrerequisite>DarkDescent_DampenerResearch</researchPrerequisite>
+		<recipeUsers>
+			<li>TableMachining</li>
+		</recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>InstallDarkDescent_Dampener</defName>
+    <label>install servant dampener</label>
+    <description>Install a servant dampener.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_Dampener</ThingDef>
+      <HediffDef>DarkDescent_Dampener</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing servant dampener.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DarkDescent_Dampener</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DarkDescent_Dampener</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>DarkDescent_Dampener</addsHediff>
+	<recipeUsers Inherit="False">
+      <li>DarkDescent_Wretch</li>
+	  <li>DarkDescent_Engineer</li>
+      <li>DarkDescent_Harvester</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveDarkDescent_Dampener</defName>
+    <label>remove servant dampener</label>
+    <description>Remove the servant dampener.</description>
+    <descriptionHyperlinks>
+      <ThingDef>DarkDescent_Dampener</ThingDef>
+      <HediffDef>DarkDescent_Dampener</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing servant dampener.</jobString>
+    <removesHediff>DarkDescent_Dampener</removesHediff>
+	<recipeUsers Inherit="False">
+      <li>DarkDescent_Wretch</li>
+      <li>DarkDescent_Engineer</li>
+      <li>DarkDescent_Harvester</li>
+    </recipeUsers>
+  </RecipeDef>
+
+</Defs>

@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- res infusion -->
+
+  <RecipeDef>
+    <researchPrerequisite>DarkDescent_InfusionResurrectionResearch</researchPrerequisite>
+    <defName>DarkDescent_InfusionResurrectionCreation</defName>
+    <label>create resurrection infusion</label>
+    <description>Create a resurrection infusion from 25 vitae, 50 plasteel and 3 advanced components.</description>
+    <jobString>Creating resurrection infusion.</jobString>
+    <workAmount>800</workAmount>
+	<workSkill>Crafting</workSkill>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+				<li>DarkDescent_Vitae</li>
+		  </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+				<li>Plasteel</li>
+		  </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+				<li>ComponentSpacer</li>
+		  </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+	  <thingDefs>
+			<li>DarkDescent_Vitae</li>
+			<li>Plasteel</li>
+			<li>ComponentSpacer</li>
+		  </thingDefs>
+    </fixedIngredientFilter>
+	<products>
+      <DarkDescent_InfusionResurrection>1</DarkDescent_InfusionResurrection>
+    </products>
+	<skillRequirements>
+      <Intellectual>18</Intellectual>
+    </skillRequirements>
+  </RecipeDef>
+  
+  	<!-- vitae extractor -->
+
+  <RecipeDef>
+    <researchPrerequisite>DarkDescent_ExtractorResearch</researchPrerequisite>
+    <defName>DarkDescent_ExtractorCreation</defName>
+    <label>create vitae extractor</label>
+    <description>Create a vitae extractor from 50 steel and 3 components.</description>
+    <jobString>Creating resurrection infusion.</jobString>
+    <workAmount>500</workAmount>
+	<workSkill>Crafting</workSkill>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+				<li>Steel</li>
+		  </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+				<li>ComponentIndustrial</li>
+		  </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+	  <thingDefs>
+			<li>Steel</li>
+			<li>ComponentIndustrial</li>
+		  </thingDefs>
+    </fixedIngredientFilter>
+	<products>
+      <DarkDescent_Extractor>1</DarkDescent_Extractor>
+    </products>
+	<skillRequirements>
+      <Intellectual>8</Intellectual>
+    </skillRequirements>
+  </RecipeDef>
+  
+  <!-- orgone extractor -->
+
+  <RecipeDef>
+    <researchPrerequisite>DarkDescent_OrgoneExtractorResearch</researchPrerequisite>
+    <defName>DarkDescent_OrgoneExtractorCreation</defName>
+    <label>create orgone extractor</label>
+    <description>Create a orgone extractor from 50 steel and 3 components.</description>
+    <jobString>Creating resurrection infusion.</jobString>
+    <workAmount>500</workAmount>
+	<workSkill>Crafting</workSkill>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+				<li>Steel</li>
+		  </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+				<li>ComponentIndustrial</li>
+		  </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+	  <thingDefs>
+			<li>Steel</li>
+			<li>ComponentIndustrial</li>
+		  </thingDefs>
+    </fixedIngredientFilter>
+	<products>
+      <DarkDescent_OrgoneExtractor>1</DarkDescent_OrgoneExtractor>
+    </products>
+	<skillRequirements>
+      <Intellectual>10</Intellectual>
+    </skillRequirements>
+  </RecipeDef>
+ 
+</Defs>

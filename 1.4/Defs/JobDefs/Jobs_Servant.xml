@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<JobDef>
+		<defName>DarkDescent_ServantRepair</defName>
+		<driverClass>DarkDescent.JobDriver_Repair</driverClass>
+		<reportString>repairing TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	
+	<JobDef>
+		<defName>DarkDescent_ServantDeconstruct</defName>
+		<driverClass>DarkDescent.JobDriver_Deconstruct</driverClass>
+		<reportString>deconstructing TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	
+	<JobDef>
+		<defName>DarkDescent_ServantFinishFrame</defName>
+		<driverClass>DarkDescent.JobDriver_ConstructFinishFrame</driverClass>
+		<reportString>building TargetA.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	
+</Defs>

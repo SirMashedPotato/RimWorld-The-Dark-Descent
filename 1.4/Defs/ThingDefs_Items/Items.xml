@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Orb -->
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>DarkDescent_Orb</defName>
+		<label>orb</label>
+		<description>An ancient orb, of unknown origin. It is smooth, yet rough. Cold, yet hot. Dark, yet light. Touching it fills one with a profound sense of fear, for the power contained within is sure to corrupt.</description>
+		<graphicData>
+		  <texPath>Things/Item/Special/DarkDescent_Orb</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>0.8</drawSize>
+		</graphicData>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<stackLimit>1</stackLimit>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+		  <MarketValue>500</MarketValue>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <Mass>2</Mass>
+		  <Flammability>0.2</Flammability>
+		</statBases>
+		<thingCategories>
+		  <li>Artifacts</li>
+		</thingCategories>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<techLevel>Medieval</techLevel>
+		<tradeTags>
+		  <li>Artifact</li>
+		  <li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>
+		<relicChance>3</relicChance>
+		<comps>
+		  <li Class="CompProperties_Styleable"></li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Vitae -->
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>DarkDescent_Vitae</defName>
+		<label>Brennenburg vitae</label>
+		<description>Vitae extracted from a human. The extraction process is somewhat painful, a necessity for maximum yield. Rather useless by itself, though with the right tools the possibilities are endless.\n\nAlthough other species may be tortured for vitae, the quanitity produced is not worth the effort.</description>
+		<graphicData>
+		  <texPath>Things/Item/Resource/DarkDescent_Vitae</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<stackLimit>75</stackLimit>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+		  <MarketValue>50</MarketValue>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <Mass>0.2</Mass>
+		  <Flammability>0.2</Flammability>
+		</statBases>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<tradeability>Sellable</tradeability>
+		<techLevel>Neolithic</techLevel>
+		<tradeTags>
+		  <li>ExoticMisc</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<!-- Orgone -->
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>DarkDescent_Orgone</defName>
+		<label>orgone</label>
+		<description>Orgone extracted from a human. The extraction process is highly draining, on both mind and body. Rather useless by itself, though with the right tools the possibilities are endless.</description>
+		<graphicData>
+		  <texPath>Things/Item/Resource/DarkDescent_Orgone</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<stackLimit>75</stackLimit>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+		  <MarketValue>50</MarketValue>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <Mass>0.2</Mass>
+		  <Flammability>0.2</Flammability>
+		</statBases>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<tradeability>Sellable</tradeability>
+		<techLevel>Neolithic</techLevel>
+		<tradeTags>
+		  <li>ExoticMisc</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<!-- res infusion -->
+	
+	<ThingDef ParentName="MechSerumBase">
+		<defName>DarkDescent_InfusionResurrection</defName>
+		<label>resurrection infusion</label>
+		<description>An infusion of concentrated vitae, held within a strange device. It can be used to bring both human and orb servant corpses back to life.\n\nDue to the fragmented nature of the schematics, the device is likely not flawless, and seems to work best on recently deceased corpses. Testing also shows it to work almost flawlessly on orb servants.</description>
+		<graphicData>
+		  <texPath>Things/Item/Special/DarkDescent_LeydenJar</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<statBases>
+		  <MarketValue>500</MarketValue>
+		</statBases>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<tradeability>Sellable</tradeability>
+		<comps>
+		  <li Class="CompProperties_Usable">
+			<useJob>UseItem</useJob>
+			<useLabel>Use resurrection infusion</useLabel>
+			<useDuration>0</useDuration>
+		  </li>
+		  <li Class="CompProperties_Targetable">
+			<compClass>CompTargetable_SingleCorpse</compClass>
+			<fleshCorpsesOnly>true</fleshCorpsesOnly>
+			<nonDessicatedCorpsesOnly>true</nonDessicatedCorpsesOnly>
+		  </li>
+		  <li>
+			<compClass>DarkDescent.CompTargetEffect_VitaeResurrect</compClass>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<!-- vitae extractor -->
+	
+	<ThingDef ParentName="MechSerumBase">
+		<defName>DarkDescent_Extractor</defName>
+		<label>vitae extractor</label>
+		<description>A single-use device used to completely drain a downed target of vitae, killing them in the process. Considerably more efficient than extracting vitae manually, though the device was not designed with any safeguards to prevent death.</description>
+		<graphicData>
+		  <texPath>Things/Item/Special/DarkDescent_VitaeExtractor</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<statBases>
+		  <MarketValue>100</MarketValue>
+		</statBases>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<tradeability>Sellable</tradeability>
+		<comps>
+		  <li Class="CompProperties_Usable">
+			<useJob>UseItem</useJob>
+			<useLabel>Use vitae extractor</useLabel>
+			<useDuration>0</useDuration>
+		  </li>
+		  <li Class="CompProperties_Targetable">
+			<compClass>DarkDescent.CompTargetable_SinglePawnHumanlike</compClass>
+		  </li>
+		  <li>
+			<compClass>DarkDescent.CompTargetEffect_ExtractVitae</compClass>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<!-- orgone extractor -->
+	
+	<ThingDef ParentName="MechSerumBase">
+		<defName>DarkDescent_OrgoneExtractor</defName>
+		<label>orgone extractor</label>
+		<description>A single-use device used to completely drain a downed target of orgone, killing them in the process. Considerably more efficient than extracting orgone manually, though the device was not designed with any safeguards to prevent death.</description>
+		<graphicData>
+		  <texPath>Things/Item/Special/DarkDescent_OrgoneExtractor</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>10</stackLimit>
+		<statBases>
+		  <MarketValue>100</MarketValue>
+		</statBases>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<tradeability>Sellable</tradeability>
+		<comps>
+		  <li Class="CompProperties_Usable">
+			<useJob>UseItem</useJob>
+			<useLabel>Use orgone extractor</useLabel>
+			<useDuration>0</useDuration>
+		  </li>
+		  <li Class="CompProperties_Targetable">
+			<compClass>DarkDescent.CompTargetable_SinglePawnHumanlike</compClass>
+		  </li>
+		  <li>
+			<compClass>DarkDescent.CompTargetEffect_ExtractOrgone</compClass>
+		  </li>
+		</comps>
+	</ThingDef>
+
+</Defs>

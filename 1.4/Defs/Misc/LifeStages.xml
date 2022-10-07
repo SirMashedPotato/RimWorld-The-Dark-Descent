@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <LifeStageDef>
+    <defName>AnimalAdult_Sterile</defName>
+    <label>adult</label>
+    <visible>false</visible>
+    <reproductive>false</reproductive>
+    <milkable>true</milkable>
+    <shearable>true</shearable>
+	<caravanRideable>true</caravanRideable>
+  </LifeStageDef>
+  
+</Defs>

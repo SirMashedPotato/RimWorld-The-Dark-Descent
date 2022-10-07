@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>InactiveServant</defName>
+      <label>inactive orb servants</label>
+      <parent>Items</parent>
+    </ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>DeadServant</defName>
+		<label>orb servant corpses</label>
+		  <parent>Corpses</parent>
+    </ThingCategoryDef>
+
+</Defs>

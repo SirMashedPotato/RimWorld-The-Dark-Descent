@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef>
+		<defName>DarkDescent_VitaeSaturated</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>vitae saturated</label>
+		<description>A servant body absolutely saturated with vitae. Causes cells to rapidly regenerate, healing wounds over time, and potentially healing permanent wounds over a much longer period of time.</description>
+		<defaultLabelColor>(1,1,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+		  <li Class="HediffCompProperties_HealPermanentWounds" />
+		  <li Class="DarkDescent.HediffCompProperties_HealWounds" />
+		</comps>
+		<stages>
+		</stages>
+	</HediffDef>
+	  
+</Defs>

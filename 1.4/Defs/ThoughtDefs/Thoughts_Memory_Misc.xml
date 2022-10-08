@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>DarkDescent_KnowGuestDrained</defName>
+    <durationDays>8</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <nullifyingTraits>
+      <li>Bloodlust</li>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>someone was drained</label>
+        <description>The colony drained vitae or orgone from a guest or prisoner. It's horrible, draining someone when they have no choice.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>DarkDescent_KnowColonistDrained</defName>
+    <durationDays>8</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <nullifyingTraits>
+      <li>Bloodlust</li>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>colonist was drained</label>
+        <description>Someone drained a colonist for vitae or orgone. It's horrible, draining someone when they have no choice.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>DarkDescent_MyDrained</defName>
+    <durationDays>8</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>I was drained</label>
+        <description>The colony drained me for vitae or orgone, me! They're going to drain me dry!</description>
+        <baseMoodEffect>-30</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+
+</Defs>

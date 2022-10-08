@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Grunt -->
+	
+	<ThingDef ParentName="DarkDescent_CreationBase">
+		<defName>DarkDescent_Grunt</defName>
+		<label>servant grunt</label>
+		<uiIconScale>1.35</uiIconScale>
+		<description>A servant created through use of an orb. A twisted abomination, an affront to nature itself.\n\nThe grunt was one of the first servants created using an orb. As such, it is the most basic. Both intelligent and strong enough to undertake menial tasks, lifting, moving, dragging bodies into the cellar in the middle of the night, and even mining. Luckily it is not intelligent enough to question its own existence, or remember its past life.\n\nDue to its diminished intelligence, grunts can often be found staring into space. Many consider the sight of a, vaguely, humanoid creature staring directly at them, eyes never blinking, mouth hanging agape, to be rather unnerving. As such, the grunt was never commonly found in households. There was also the issue of it essentially being a reanimated corpse.</description>
+		<statBases>
+		  <MarketValue>350</MarketValue>
+		  <MoveSpeed>3.8</MoveSpeed>
+		</statBases>
+	   <tools>
+		  <li>
+			<label>left fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>12.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>right fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>12.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>5</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<comps>
+		</comps>
+		<race>
+			<thinkTreeMain>DarkDescent_Servant</thinkTreeMain>
+			<thinkTreeConstant>DarkDescent_ServantConstant_Agressive</thinkTreeConstant>
+		  <body>Human</body>
+		  <baseBodySize>1</baseBodySize>
+		  <baseHealthScale>2.3</baseHealthScale>
+		  <lifeStageAges>
+			<li>
+			  <def>AnimalAdult_Sterile</def>
+			  <minAge>0</minAge>
+			</li>
+		  </lifeStageAges>
+		</race>
+	</ThingDef>
+	  
+	<PawnKindDef Name="DarkDescent_Grunt" ParentName="AnimalKindBase">
+		<defName>DarkDescent_Grunt</defName>
+		<label>servant grunt</label>
+		<race>DarkDescent_Grunt</race>
+		<combatPower>150</combatPower>
+		<ecoSystemWeight>50</ecoSystemWeight>
+		<canArriveManhunter>false</canArriveManhunter>
+		<wildGroupSize>1</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Creation/Grunt/DarkDescent_Grunt</texPath>
+			  <drawSize>1.6</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Creation/Grunt/DarkDescent_Dessicated_Grunt</texPath>
+			  <drawSize>1.6</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+	
+
+</Defs>

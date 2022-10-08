@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>MorrowRim</li>
+		</mods> 
+				
+		<match Class="PatchOperationSequence">
+			<operations>
+	
+				<!-- give select animals ash-resistant -->
+				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/ThingDef[defName="DarkDescent_Brute" or defName="DarkDescent_Grunt" or defName="DarkDescent_Harvester" or defName="DarkDescent_Goliath"]</xpath>
+					<value>
+						<li Class="MorrowRim.ExtendedRaceProperties">
+							<ashResistant>Resistant</ashResistant>
+						</li>
+					</value>
+				</li>	
+		
+
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>
+

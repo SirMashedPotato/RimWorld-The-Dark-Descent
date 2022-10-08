@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Goliath -->
+	
+	<ThingDef ParentName="DarkDescent_CreationBase">
+		<defName>DarkDescent_Goliath</defName>
+		<label>servant goliath</label>
+		<uiIconScale>1.35</uiIconScale>
+		<description>A servant created through use of an orb. A twisted abomination, an affront to nature itself.\n\nThe goliath is one of Alexander Brennenburgs inventions, though it exists only in fragmented manuscripts, suggesting he never actually created one. As its name suggests, the goliath is a mountain of meat, and a true force to be reckoned with. While not as heavily armoured as the brute, or as fast, the goliaths enormous mass allows it to withstand countless blows.\n\nThe sheer amount of vitae required to create this beast allows it to constantly regenerate even the most un-life-threatening of wounds. Of course this has resulted in the goliath having quite the appetite.</description>
+		<statBases>
+		  <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+		  <MoveSpeed>3.0</MoveSpeed>
+		  <InjuryHealingFactor>2.5</InjuryHealingFactor>
+		  <MarketValue>700</MarketValue>
+		</statBases>
+		<tools>
+			  <li>
+				<label>left fist</label>
+				<capacities>
+				  <li>Blunt</li>
+				  <li>Stab</li>
+				</capacities>
+				<power>20.2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+				  <extraMeleeDamages>
+					<li>
+					  <def>Stun</def>
+					  <amount>14</amount>
+					</li>
+				  </extraMeleeDamages>
+				</surpriseAttack>
+			  </li>
+			  <li>
+				<label>right fist</label>
+				<capacities>
+				  <li>Blunt</li>
+				  <li>Stab</li>
+				</capacities>
+				<power>20.2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+				  <extraMeleeDamages>
+					<li>
+					  <def>Stun</def>
+					  <amount>14</amount>
+					</li>
+				  </extraMeleeDamages>
+				</surpriseAttack>
+			  </li>
+			  <li>
+				<label>head</label>
+				<capacities>
+				  <li>Blunt</li>
+				</capacities>
+				<power>7</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			  </li>
+		</tools>
+		<comps>
+		
+		
+		
+		</comps>
+		<race>
+			  <thinkTreeMain>DarkDescent_Servant</thinkTreeMain>
+			  <maxPreyBodySize>2</maxPreyBodySize>
+			  <baseHungerRate>1</baseHungerRate>
+			  <thinkTreeConstant>DarkDescent_ServantConstant_Agressive</thinkTreeConstant>
+			  <body>Human</body>
+			  <baseBodySize>3</baseBodySize>
+			  <baseHealthScale>6.9</baseHealthScale>
+			  <lifeStageAges>
+				<li>
+				  <def>AnimalAdult_Sterile</def>
+				  <minAge>0</minAge>
+				</li>
+			  </lifeStageAges>
+		</race>
+	</ThingDef>
+	  
+	<PawnKindDef Name="DarkDescent_Goliath" ParentName="AnimalKindBase">
+		<defName>DarkDescent_Goliath</defName>
+		<label>servant goliath</label>
+		<race>DarkDescent_Goliath</race>
+		<combatPower>300</combatPower>
+		<ecoSystemWeight>50</ecoSystemWeight>
+		<canArriveManhunter>false</canArriveManhunter>
+		<wildGroupSize>1</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Creation/Goliath/DarkDescent_Goliath</texPath>
+			  <drawSize>1.9</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Creation/Goliath/DarkDescent_Dessicated_Goliath</texPath>
+			  <drawSize>1.9</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+	
+
+</Defs>

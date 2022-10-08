@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Brute -->
+	
+	<ThingDef ParentName="DarkDescent_CreationBase">
+		<defName>DarkDescent_Brute</defName>
+		<label>servant brute</label>
+		<uiIconScale>1.35</uiIconScale>
+		<description>A servant created through use of an orb. A twisted abomination, an affront to nature itself.\n\nThe brute was created after the grunt. Its body is held together with metal plating, staples and wire. Whilst the grunt was initially made for heavy lifting, the brute was made as for guarding. Simply the sight of a brute proved to be an unparalleled deterrent.\n\nLike the grunt, the mental capacity of the brute has been somewhat damaged by reanimation. The brute will simply remain standing in one spot if it has nothing to do. This can be somewhat convenient if one wants the brute to guard a specific location, but it is more likely the brute will simply get in the way.</description>
+		<statBases>
+		  <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+		  <MoveSpeed>3.0</MoveSpeed>
+		  <MarketValue>400</MarketValue>
+		</statBases>
+	   <tools>
+		  <li>
+			<label>left fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>13.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>right fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>13.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		  </li>
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>7</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<race>
+		  <thinkTreeMain>DarkDescent_Servant</thinkTreeMain>
+		  <thinkTreeConstant>DarkDescent_ServantConstant_Agressive</thinkTreeConstant>
+		  <body>Human</body>
+		  <baseBodySize>1.1</baseBodySize>
+		  <baseHealthScale>2.8</baseHealthScale>
+		  <lifeStageAges>
+			<li>
+			  <def>AnimalAdult_Sterile</def>
+			  <minAge>0</minAge>
+			</li>
+		  </lifeStageAges>
+		</race>
+	</ThingDef>
+	  
+	<PawnKindDef Name="DarkDescent_Brute" ParentName="AnimalKindBase">
+		<defName>DarkDescent_Brute</defName>
+		<label>servant brute</label>
+		<race>DarkDescent_Brute</race>
+		<combatPower>180</combatPower>
+		<ecoSystemWeight>50</ecoSystemWeight>
+		<canArriveManhunter>false</canArriveManhunter>
+		<wildGroupSize>1</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Creation/Brute/DarkDescent_Brute</texPath>
+			  <drawSize>1.65</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Creation/Brute/DarkDescent_Dessicated_Brute</texPath>
+			  <drawSize>1.65</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+	
+
+</Defs>

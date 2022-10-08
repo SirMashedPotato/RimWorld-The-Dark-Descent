@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Tesla -->
+	
+	<ThingDef ParentName="DarkDescent_CreationBase">
+		<defName>DarkDescent_Tesla</defName>
+		<label>servant tesla</label>
+		<description>A servant created through use of an orb. A twisted abomination, an affront to nature itself.\n\nTesla are a highly modified wretch, their back covered with tesla coils, causing electricity to constantly surge throughout their body. This causes their muscles to constantly contract, causing a near permanent state of twitching. This would also cause permanent crippling pain, if their nervous system were not completely fried.\n\nThey were originally made as an expendable force, perfectly suited for fighting mechanoids. The tesla coils on their back generate extremely high voltages, which are then channeled through pylons embedded in their arms. This causes their punches to fry electrical circuits in mechanoids, temporarily stunning them.\n\nAs with the wretch, there was one fatal flaw that prevented the tesla becoming a widespread fighting force. The embedded tesla coils produce a substantial amount of excess heat, causing the tesla to slowly cook itself. Thus, the tesla can only survive in refrigerated environments.\n\nSadly, the electricity constantly coursing through them effectively fries the brain and reproductive organs. They can no longer be used to perform menial tasks, but are still capable of being ordered to attack. This does come with the benefit that are no longer intelligent enough to overthrow their creators.\n\nNote: Upon death and when damaged, electricity may be released into the environment, in an ... explosive way.</description>
+		<uiIconScale>1.35</uiIconScale>
+		<statBases>
+			<MoveSpeed>3.5</MoveSpeed>
+			<MarketValue>700</MarketValue>
+			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+			<ComfyTemperatureMax>0</ComfyTemperatureMax>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+		</statBases>
+	    <tools>
+		  <li>
+			<label>left fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>15.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+			<extraMeleeDamages>
+			  <li>
+				<def>EMP</def>
+				<amount>9</amount>
+			  </li>
+			</extraMeleeDamages>
+		  </li>
+		  <li>
+			<label>right fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>15.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>14</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+			<extraMeleeDamages>
+			  <li>
+				<def>EMP</def>
+				<amount>9</amount>
+			  </li>
+			</extraMeleeDamages>
+		  </li>
+		  <li>
+			<label>head</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>7</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		  </li>
+		</tools>
+		<comps>
+		  <li Class="DarkDescent.CompProperties_TeslaDischarge">
+			<Hediff>MorrowRim_Discharge</Hediff>
+			<Sound>Explosion_EMP</Sound>
+		  </li>
+		</comps>
+		<race>
+	      <needsRest>false</needsRest>
+		  <thinkTreeMain>DarkDescent_Servant</thinkTreeMain>
+		  <thinkTreeConstant>DarkDescent_ServantConstant_Agressive</thinkTreeConstant>
+		  <deathActionWorkerClass>DarkDescent.DeathActionWorker_Tesla</deathActionWorkerClass>
+		  <body>Human</body>
+		  <baseBodySize>1.0</baseBodySize>
+		  <baseHealthScale>3.0</baseHealthScale>
+		  <baseHungerRate>2.0</baseHungerRate>
+		  <foodType>OmnivoreRoughAnimal</foodType>
+		  <useMeatFrom>Pig</useMeatFrom>
+		  <wildness>0.3</wildness>
+		  <trainability>Intermediate</trainability>
+		  <lifeStageAges>
+			<li>
+			  <def>AnimalAdult_Sterile</def>
+			  <minAge>0.0</minAge>
+			  <soundWounded>Pawn_Wildboar_Wounded</soundWounded>
+			  <soundDeath>Pawn_Wildboar_Death</soundDeath>
+			  <soundCall>Pawn_Wildboar_Call</soundCall>
+			  <soundAngry>Pawn_Wildboar_Angry</soundAngry>
+			</li>
+		  </lifeStageAges>
+		  <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.7, 1)</li>
+          <li>(2.0, 0)</li>
+        </points>
+      </litterSizeCurve>
+		</race>
+	</ThingDef>
+	  
+	<PawnKindDef Name="DarkDescent_Tesla" ParentName="AnimalKindBase">
+		<defName>DarkDescent_Tesla</defName>
+		<label>servant tesla</label>
+		<race>DarkDescent_Tesla</race>
+		<combatPower>200</combatPower>
+		<ecoSystemWeight>50</ecoSystemWeight>
+		<canArriveManhunter>true</canArriveManhunter>
+		<wildGroupSize>1</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Things/Pawn/Creation/Tesla/DarkDescent_Tesla</texPath>
+			  <drawSize>1.7</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Creation/Tesla/DarkDescent_Dessicated_Tesla</texPath>
+			  <drawSize>1.7</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+	
+
+</Defs>

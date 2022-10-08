@@ -9,7 +9,7 @@
     <description>The orbs are the only path to transcendence, and the cost of reaching it is irrelevant.</description>
     <iconPath>UI/Memes/DarkDescent_Mithraic</iconPath>
     <groupDef>Misc</groupDef>
-    <impact>2</impact>
+    <impact>1</impact>
     <renderOrder>999</renderOrder>
     <requireOne>
       <li>

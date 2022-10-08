@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ConceptDef ParentName="NotedOpportunisticBase">
+    <defName>DarkDescent_ServantsAndZones</defName>
+    <label>Servants and zones</label>
+    <helpText>Some servants are highly aggressive. If given the chance, they will gladly seek out any hostile pawns, and chase them to the edges of the map. Assigning them to zones can help to avoid this.</helpText>
+  </ConceptDef>
+  
+  <!-- Specific -->
+
+</Defs>

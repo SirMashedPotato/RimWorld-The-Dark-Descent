@@ -5,7 +5,8 @@
 	<ThingDef ParentName="AnimalThingBase" Name="DarkDescent_CreationBase" Abstract="True">
 		<statBases>
 			<PsychicSensitivity>0</PsychicSensitivity>
-			<ToxicEnvironmentResistance>0</ToxicEnvironmentResistance>
+			<ToxicResistance>1</ToxicResistance>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
 			<MoveSpeed>4.0</MoveSpeed>
 			<ComfyTemperatureMin>-20</ComfyTemperatureMin>
 			<ComfyTemperatureMax>70</ComfyTemperatureMax>

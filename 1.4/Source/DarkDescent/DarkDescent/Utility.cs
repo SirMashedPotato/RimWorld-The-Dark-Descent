@@ -15,7 +15,7 @@ namespace DarkDescent
 
         public static bool IsNotServant(Pawn pawn)
         {
-            return servantDefs.Contains(pawn.kindDef) || pawn.RaceProps.FleshType.defName == "DarkDescent_OrbServantFlesh";
+            return !servantDefs.Contains(pawn.kindDef) && pawn.RaceProps.FleshType.defName != "DarkDescent_OrbServantFlesh";
         }
 
         public static bool PawnIsDrainer (Pawn pawn)

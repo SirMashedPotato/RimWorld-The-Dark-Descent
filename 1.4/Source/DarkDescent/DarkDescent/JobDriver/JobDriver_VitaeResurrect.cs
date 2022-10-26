@@ -49,7 +49,7 @@ namespace DarkDescent
         {
             Pawn innerPawn = this.Corpse.InnerPawn;
             /* servant check */
-            if (!Utility.IsNotServant(innerPawn))
+            if (Utility.IsNotServant(innerPawn))
             {
                 ResurrectionUtility.Resurrect(innerPawn);
                 innerPawn.health.AddHediff(HediffDefOf.DarkDescent_ServantAwakening).Severity = 1f;
